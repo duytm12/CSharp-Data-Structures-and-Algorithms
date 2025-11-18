@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Learning Roadmap - C# Edition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            font-size: 1.2em;
+        }
+        
+        .roadmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+        }
+        
+        .level {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        
+        .node {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 3px solid #fff;
+            border-radius: 15px;
+            padding: 15px 25px;
+            min-width: 180px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1em;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+        
+        .node.new {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-color: #ffd700;
+            animation: pulse 2s infinite;
+        }
+        
+        .node.new::after {
+            content: " ⭐ NEW";
+            font-size: 0.7em;
+            color: #ffd700;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 16px rgba(0,0,0,0.3), 0 0 0 0 rgba(255, 215, 0, 0.7); }
+            50% { box-shadow: 0 8px 16px rgba(0,0,0,0.3), 0 0 0 10px rgba(255, 215, 0, 0); }
+        }
+        
+        .node.foundation {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .node.advanced {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .connector {
+            width: 3px;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 0 auto;
+            height: 30px;
+        }
+        
+        .level-label {
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .legend {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-box {
+            width: 30px;
+            height: 20px;
+            border-radius: 5px;
+            border: 2px solid #fff;
+        }
+        
+        .legend-box.foundation { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .legend-box.intermediate { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .legend-box.advanced { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .legend-box.new { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-color: #ffd700; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Data Structures & Algorithms</h1>
+        <p class="subtitle">C# Learning Roadmap - Updated Edition</p>
+        
+        <div class="roadmap">
+            <!-- Level 1: Foundations -->
+            <div>
+                <div class="level-label">Level 1: Foundations</div>
+                <div class="level">
+                    <div class="node foundation">Arrays & Hashing</div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Level 2: C# Specific & Basic Techniques -->
+            <div>
+                <div class="level-label">Level 2: C# Collections & Basic Techniques</div>
+                <div class="level">
+                    <div class="node new">C# Collections</div>
+                    <div class="node">Two Pointers</div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Level 3: String & Search -->
+            <div>
+                <div class="level-label">Level 3: String Manipulation & Search</div>
+                <div class="level">
+                    <div class="node new">String Manipulation</div>
+                    <div class="node">Binary Search</div>
+                    <div class="node">Sliding Window</div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Level 4: Linear Structures -->
+            <div>
+                <div class="level-label">Level 4: Linear Structures</div>
+                <div class="level">
+                    <div class="node">Stack</div>
+                    <div class="node">Linked List</div>
+                    <div class="node new">Recursion</div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Level 5: Tree Structures -->
+            <div>
+                <div class="level-label">Level 5: Tree Structures</div>
+                <div class="level">
+                    <div class="node">Trees</div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Level 6: Advanced Tree Topics -->
+            <div>
+                <div class="level-label">Level 6: Advanced Tree Topics</div>
+                <div class="level">
+                    <div class="node">Tries</div>
+                    <div class="node">Heap / Priority Queue</div>
+                    <div class="node">Backtracking</div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Level 7: Advanced Techniques -->
+            <div>
+                <div class="level-label">Level 7: Advanced Techniques</div>
+                <div class="level">
+                    <div class="node">Intervals</div>
+                    <div class="node">Greedy</div>
+                    <div class="node">Graphs</div>
+                    <div class="node">1-D DP</div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Level 8: Specialized Topics -->
+            <div>
+                <div class="level-label">Level 8: Specialized Topics</div>
+                <div class="level">
+                    <div class="node advanced">Advanced Graphs</div>
+                    <div class="node advanced">2-D DP</div>
+                    <div class="node advanced">Bit Manipulation</div>
+                </div>
+            </div>
+            
+            <div class="connector"></div>
+            
+            <!-- Final Level -->
+            <div>
+                <div class="level-label">Final Level: Mastery</div>
+                <div class="level">
+                    <div class="node advanced">Math & Geometry</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box foundation"></div>
+                <span>Foundation Topics</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box intermediate"></div>
+                <span>Intermediate Topics</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box advanced"></div>
+                <span>Advanced Topics</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box new"></div>
+                <span>New/Modified Topics</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
