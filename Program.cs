@@ -1,4 +1,5 @@
 using System;
+using DSA._1_1_ContainsDuplicate_Easy;
 
 namespace DSA;
 
@@ -21,7 +22,7 @@ class Program
         // 01. Arrays & Hashing (9 problems)
         // ============================================
         // using DSA._1_1_ContainsDuplicate_Easy;
-        // ContainsDuplicate.Test();
+        ContainsDuplicate.Test();
         
         // using DSA._1_2_TwoSum_Easy;
         // TwoSum.Test();

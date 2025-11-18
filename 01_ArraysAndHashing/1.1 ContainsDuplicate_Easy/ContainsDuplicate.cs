@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DSA._1_1_ContainsDuplicate_Easy;
 
@@ -20,8 +21,31 @@ public class ContainsDuplicate
 {
     public static bool Solution(int[] nums)
     {
-        // TODO: Implement your solution here
-        //
+        // Solution 1
+        // HashSet<int> seen = new HashSet<int>();
+        // for (int i = 0; i< nums.Length; i++)
+        // {
+        //     if (seen.Contains(nums[i]))
+        //     {
+        //         return true;
+        //     }
+        //     else
+        //     {
+        //         seen.Add(nums[i]);
+        //     }
+        // }
+        // return false;
+
+
+        // Solution 2.1: Add all elements to HashSet, then compare counts
+        // If HashSet count < array length, there are duplicates
+
+        // HashSet<int> seen = new HashSet<int>(nums);
+        // return (seen.Count < nums.Length);
+
+        // Solution 2.2: Using LinQ .ToHashSet() function.
+        return nums.ToHashSet().Count < nums.Length;
+
         // Approach:
         // 1. We need to check if any number appears more than once
         // 2. Think about what data structure can help us track "seen" numbers
@@ -32,7 +56,7 @@ public class ContainsDuplicate
         // Time Complexity: Try to achieve O(n)
         // Space Complexity: Try to achieve O(n)
 
-        return false; // Replace this with your implementation
+        
     }
     
     public static void Test()
