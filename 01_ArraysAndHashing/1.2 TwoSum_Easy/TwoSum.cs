@@ -44,36 +44,24 @@ public class TwoSum
         // Space Complexity: Try to achieve O(n)
 
         // 1. Brute Force
-
         // for (int i = 0; i < nums.Length; i++)
         // {
         //     for (int j = i + 1; j < nums.Length; j++)
         //     {
-        //         if (nums[i] + nums[j] == target)
+        //         int remaining = target - nums[i];
+        //         if (remaining == nums[j])
         //         {
-        //             return new int[] { i, j };
+        //             return [i, j];
         //         }
+
         //     }
+
         // }
-        // return Array.Empty<int>();
 
         // 2.1 Dictionary
-        // Dictionary <int, int> dict = new Dictionary<int, int>();
-        // for (int i=0; i < nums.Length; i++)
-        // {
-        //     int complement = target - nums[i];
-        //     if (dict.ContainsKey(complement))
-        //     {
-        //         return new int[] {dict[complement], i};
-        //     }
-        //     dict[nums[i]] = i;
-        // }
-        // return Array.Empty<int>();
- 
+        var dict = new Dictionary<int,int>();
 
-        // 2.2 Advanced Dictionary Initialize
-        var dict = new Dictionary<int, int> ();
-        for (int i =0; i < nums.Length; i++)
+        for (int i = 0; i < nums.Length; i++)
         {
             int complement = target - nums[i];
             if (dict.TryGetValue(complement, out int complementIndex))
@@ -81,7 +69,9 @@ public class TwoSum
                 return [complementIndex, i];
             }
             dict[nums[i]] = i;
+
         }
+
         return [];
 
     }

@@ -21,27 +21,29 @@ public class ContainsDuplicate
 {
     public static bool Solution(int[] nums)
     {
-        // Solution 1
-        // HashSet<int> seen = new HashSet<int>();
-        // for (int i = 0; i< nums.Length; i++)
+        // Array.Sort(nums);
+        // // Solution 1
+        // for (int i =0; i < nums.Length; i++)
         // {
-        //     if (seen.Contains(nums[i]))
+        //     for (int j = i+1; j<nums.Length; j++)
         //     {
-        //         return true;
-        //     }
-        //     else
-        //     {
-        //         seen.Add(nums[i]);
+        //         if (nums[i]==nums[j]) return true;
         //     }
         // }
-        // return false;
+
 
 
         // Solution 2.1: Add all elements to HashSet, then compare counts
         // If HashSet count < array length, there are duplicates
+        // var seen = new HashSet<int>(); 
+        // for (int i = 0; i < nums.Length; i++)
+        // {
+        //     if (seen.Contains(nums[i])) return true;
+        //     seen.Add(nums[i]);
+        // }
 
-        // HashSet<int> seen = new HashSet<int>(nums);
-        // return (seen.Count < nums.Length);
+        // var seen = new HashSet<int>(nums);
+        // return seen.Count < nums.Length;
 
         // Solution 2.2: Using LinQ .ToHashSet() function.
         return nums.ToHashSet().Count < nums.Length;
@@ -56,7 +58,7 @@ public class ContainsDuplicate
         // Time Complexity: Try to achieve O(n)
         // Space Complexity: Try to achieve O(n)
 
-        
+    // return false; 
     }
     
     public static void Test()

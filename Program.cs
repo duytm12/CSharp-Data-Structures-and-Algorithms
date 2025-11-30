@@ -1,5 +1,5 @@
 using System;
-using DSA._1_2_TwoSum_Easy;
+using DSA._1_3_ProductExceptSelf_Medium;
 
 namespace DSA;
 
@@ -25,10 +25,10 @@ class Program
         // ContainsDuplicate.Test();
         
         // using DSA._1_2_TwoSum_Easy;
-        TwoSum.Test();
+        // TwoSum.Test();
         
         // using DSA._1_3_ProductExceptSelf_Medium;
-        // ProductExceptSelf.Test();
+        ProductExceptSelf.Test();
         
         // using DSA._1_4_ValidAnagram_Easy;
         // ValidAnagram.Test();

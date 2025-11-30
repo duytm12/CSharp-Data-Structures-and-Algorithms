@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-
 namespace DSA._1_4_ValidAnagram_Easy;
 
 /// <summary>
@@ -25,14 +24,39 @@ public class ValidAnagram
         // Hint: Count character frequencies in both strings and compare
         // Time Complexity: O(n)
         // Space Complexity: O(1) - at most 26 characters
-        
+        if (s.Length != t.Length) return false;
+
+        var charCount = new Dictionary<char, int>();
+
+        foreach (char c in s)
+        {
+            charCount.TryGetValue(c, out int count);
+            charCount[c] = count + 1;
+        }
+
+        foreach (char c in t)
+        {
+            if (!charCount.ContainsKey(c) || charCount[c] == 0)
+            {
+                return false;
+            }
+
+            charCount[c]--;
+        }
+
+        foreach (var count in charCount.Values)
+        {
+            if (count != 0) return false;
+        }
+
+
         return false;
     }
-    
+
     public static void Test()
     {
         Console.WriteLine("\n=== Testing Problem 1.4: Valid Anagram ===");
-        
+
         // Test Case 1: Valid anagram
         string test1_s = "anagram";
         string test1_t = "nagaram";
@@ -40,7 +64,7 @@ public class ValidAnagram
         Console.WriteLine($"Test 1 - Input: s = \"{test1_s}\", t = \"{test1_t}\"");
         Console.WriteLine($"         Output: {result1}, Expected: True");
         Console.WriteLine($"         {(result1 == true ? "✓ PASSED" : "✗ FAILED")}\n");
-        
+
         // Test Case 2: Not an anagram
         string test2_s = "rat";
         string test2_t = "car";
