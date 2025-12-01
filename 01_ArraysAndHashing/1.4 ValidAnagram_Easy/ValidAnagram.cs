@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 namespace DSA._1_4_ValidAnagram_Easy;
 
 /// <summary>
@@ -20,37 +21,33 @@ public class ValidAnagram
 {
     public static bool Solution(string s, string t)
     {
-        // TODO: Implement solution
-        // Hint: Count character frequencies in both strings and compare
-        // Time Complexity: O(n)
-        // Space Complexity: O(1) - at most 26 characters
+        // Solution: Count character frequencies in both strings and compare
+        // Time Complexity: O(n) where n is the length of the strings
+        // Space Complexity: O(1) - at most 26 characters (lowercase English letters)
+
+        // If lengths differ, they can't be anagrams
         if (s.Length != t.Length) return false;
 
+        // Use a single dictionary to count character frequencies
+        // Increment for characters in s, decrement for characters in t
         var charCount = new Dictionary<char, int>();
 
-        foreach (char c in s)
+        for (int i = 0; i < s.Length; i++)
         {
-            charCount.TryGetValue(c, out int count);
-            charCount[c] = count + 1;
+            charCount[s[i]] = charCount.GetValueOrDefault(s[i], 0) + 1;
         }
 
-        foreach (char c in t)
+        for (int i = 0; i < t.Length; i++)
         {
-            if (!charCount.ContainsKey(c) || charCount[c] == 0)
+            if (!charCount.ContainsKey(t[i]))
             {
                 return false;
             }
+            charCount[s[i]]--;
 
-            charCount[c]--;
+            if (charCount[s[i]] < 0) return false;
         }
-
-        foreach (var count in charCount.Values)
-        {
-            if (count != 0) return false;
-        }
-
-
-        return false;
+        return true;
     }
 
     public static void Test()

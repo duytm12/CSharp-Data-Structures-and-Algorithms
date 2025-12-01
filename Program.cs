@@ -1,5 +1,5 @@
 using System;
-using DSA._1_3_ProductExceptSelf_Medium;
+using DSA._1_4_ValidAnagram_Easy;
 
 namespace DSA;
 
@@ -28,10 +28,10 @@ class Program
         // TwoSum.Test();
         
         // using DSA._1_3_ProductExceptSelf_Medium;
-        ProductExceptSelf.Test();
+        //ProductExceptSelf.Test();
         
         // using DSA._1_4_ValidAnagram_Easy;
-        // ValidAnagram.Test();
+         ValidAnagram.Test();
         
         // using DSA._1_5_GroupAnagrams_Medium;
         // GroupAnagrams.Test();
