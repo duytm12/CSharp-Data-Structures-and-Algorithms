@@ -19,8 +19,15 @@ public class CharacterFrequency
         // Hint: Use Dictionary.TryGetValue or Dictionary.ContainsKey
         // Time Complexity: O(n)
         // Space Complexity: O(k) where k is number of unique characters
-        
-        return new Dictionary<char, int>();
+
+        var result = new Dictionary<char, int>();
+
+        for (int i = 0; i < s.Length; i++)
+        {
+            result[s[i]] = result.GetValueOrDefault(s[i], 0) + 1;
+        }
+
+        return result;
     }
     
     public static void Test()

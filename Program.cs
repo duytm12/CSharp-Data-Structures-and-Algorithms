@@ -1,5 +1,5 @@
 using System;
-using DSA._2_1_FindMax_Easy;
+using DSA._2_2_CharacterFrequency_Medium;
 
 namespace DSA;
 
@@ -52,10 +52,10 @@ class Program
         // 02. C# Collections (9 problems)
         // ============================================
         // using DSA._2_1_FindMax_Easy;
-         FindMax.Test();
+        // FindMax.Test();
         
         // using DSA._2_2_CharacterFrequency_Medium;
-        // CharacterFrequency.Test();
+         CharacterFrequency.Test();
         
         // using DSA._2_3_GroupAnagrams_Medium;
         // GroupAnagrams.Test();
