@@ -1,5 +1,5 @@
 using System;
-using DSA._1_4_ValidAnagram_Easy;
+using DSA._2_1_FindMax_Easy;
 
 namespace DSA;
 
@@ -31,7 +31,7 @@ class Program
         //ProductExceptSelf.Test();
         
         // using DSA._1_4_ValidAnagram_Easy;
-         ValidAnagram.Test();
+        // ValidAnagram.Test();
         
         // using DSA._1_5_GroupAnagrams_Medium;
         // GroupAnagrams.Test();
@@ -52,7 +52,7 @@ class Program
         // 02. C# Collections (9 problems)
         // ============================================
         // using DSA._2_1_FindMax_Easy;
-        // FindMax.Test();
+         FindMax.Test();
         
         // using DSA._2_2_CharacterFrequency_Medium;
         // CharacterFrequency.Test();

@@ -20,8 +20,14 @@ public class FindMax
         // Hint: Use LINQ Max() or manual iteration
         // Time Complexity: O(n)
         // Space Complexity: O(1)
-        
-        return 0;
+
+        // Solution 1: Sort the list
+        // numbers.Sort();
+        //return numbers.Last();
+
+        // Solution 2: LinQ Max
+        //int result = numbers.Max();
+        return numbers.Max();
     }
     
     public static void Test()
