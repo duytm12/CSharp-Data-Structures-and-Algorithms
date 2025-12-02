@@ -1,5 +1,5 @@
 using System;
-using DSA._2_5_TwoSumDictionary_Easy;
+using DSA._2_6_IntersectionOfTwoArrays_Easy;
 
 namespace DSA;
 
@@ -64,10 +64,10 @@ class Program
         // RemoveDuplicates.Test();
         
         // using DSA._2_5_TwoSumDictionary_Easy;
-         TwoSumDictionary.Test();
+        // TwoSumDictionary.Test();
         
-        // using DSA._2_6_UnionOfArrays_Medium;
-        // UnionOfArrays.Test();
+        // using DSA._2_6_IntersectionOfTwoArrays_Easy;
+         IntersectionOfTwoArrays.Test();
         
         // using DSA._2_7_FrequencySort_Medium;
         // FrequencySort.Test();
