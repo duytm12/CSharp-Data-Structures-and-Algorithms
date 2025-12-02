@@ -19,7 +19,7 @@ namespace DSA._2_3_GroupAnagrams_Medium;
 /// </summary>
 public class GroupAnagrams
 {
-    public static List<string[]> Solution(string[] strs)
+    public static IList<IList<string>> Solution(string[] strs)
     {
         // TODO: Implement solution
         // Hint: Use Dictionary with sorted string as key, List as value
@@ -63,7 +63,7 @@ public class GroupAnagrams
             }
             list.Add(strs[i]);
         }
-        var result = new List<string[]>();
+        var result = new List<IList<string>>();
         foreach (var list in dict.Values)
         {
             result.Add(list.ToArray());

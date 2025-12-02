@@ -1,5 +1,5 @@
 using System;
-using DSA._2_3_GroupAnagrams_Medium;
+using DSA._2_4_RemoveDuplicates_Easy;
 
 namespace DSA;
 
@@ -58,10 +58,10 @@ class Program
         // CharacterFrequency.Test();
         
         // using DSA._2_3_GroupAnagrams_Medium;
-         GroupAnagrams.Test();
+        // GroupAnagrams.Test();
         
         // using DSA._2_4_RemoveDuplicates_Easy;
-        // RemoveDuplicates.Test();
+         RemoveDuplicates.Test();
         
         // using DSA._2_5_IntersectionOfArrays_Easy;
         // IntersectionOfArrays.Test();
