@@ -24,8 +24,12 @@ public class RemoveDuplicates
         // Hint: Use HashSet<T> or LINQ Distinct()
         // Time Complexity: O(n)
         // Space Complexity: O(n)
-        
-        return new List<int>();
+
+        // Using LinQ list.Distinct()
+        return [.. list.Distinct()];
+
+        // Using HashSet
+        // return list.ToHashSet().ToString();
     }
     
     public static void Test()
