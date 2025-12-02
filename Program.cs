@@ -1,5 +1,5 @@
 using System;
-using DSA._2_2_CharacterFrequency_Medium;
+using DSA._2_3_GroupAnagrams_Medium;
 
 namespace DSA;
 
@@ -55,10 +55,10 @@ class Program
         // FindMax.Test();
         
         // using DSA._2_2_CharacterFrequency_Medium;
-         CharacterFrequency.Test();
+        // CharacterFrequency.Test();
         
         // using DSA._2_3_GroupAnagrams_Medium;
-        // GroupAnagrams.Test();
+         GroupAnagrams.Test();
         
         // using DSA._2_4_RemoveDuplicates_Easy;
         // RemoveDuplicates.Test();
