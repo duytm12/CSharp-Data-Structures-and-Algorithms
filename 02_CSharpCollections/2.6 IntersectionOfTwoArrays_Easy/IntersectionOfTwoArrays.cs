@@ -44,18 +44,19 @@ public class IntersectionOfTwoArrays
         // if (result.Count != 0) return result.ToArray();
 
         // 2. HashSet contains
-        var hs1 = nums1.ToHashSet();
+        var hs = nums1.ToHashSet();
         var result = new HashSet<int>();
 
         for (int i = 0; i < nums2.Length; i++)
         {
-            if (hs1.Contains(nums2[i]))
+            if (hs.Contains(nums2[i]))
             {
                 result.Add(nums2[i]);
             }
         }
-        
+
         return [..result];
+
     }
     
     public static void Test()
@@ -97,4 +98,3 @@ public class IntersectionOfTwoArrays
         Console.WriteLine($"         {(passed4 ? "✓ PASSED" : "✗ FAILED")}\n");
     }
 }
-
