@@ -43,11 +43,13 @@ public class ValidAnagram
             {
                 return false;
             }
-            charCount[s[i]]--;
+            charCount[t[i]]--;
 
-            if (charCount[s[i]] < 0) return false;
+            if (charCount[t[i]] < 0) return false;
         }
-        return true;
+        
+        // Verify all counts are zero (all characters from s were matched in t)
+        return charCount.Values.All(count => count == 0);
     }
 
     public static void Test()
@@ -69,6 +71,22 @@ public class ValidAnagram
         Console.WriteLine($"Test 2 - Input: s = \"{test2_s}\", t = \"{test2_t}\"");
         Console.WriteLine($"         Output: {result2}, Expected: False");
         Console.WriteLine($"         {(result2 == false ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 3: Same characters rearranged (actual anagram)
+        string test3_s = "aacc";
+        string test3_t = "ccaa";
+        bool result3 = Solution(test3_s, test3_t);
+        Console.WriteLine($"Test 3 - Input: s = \"{test3_s}\", t = \"{test3_t}\"");
+        Console.WriteLine($"         Output: {result3}, Expected: True (both have 2 a's and 2 c's)");
+        Console.WriteLine($"         {(result3 == true ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 4: Not anagrams - different character counts
+        string test4_s = "aacc";
+        string test4_t = "ccac";
+        bool result4 = Solution(test4_s, test4_t);
+        Console.WriteLine($"Test 4 - Input: s = \"{test4_s}\", t = \"{test4_t}\"");
+        Console.WriteLine($"         Output: {result4}, Expected: False (s has 2a+2c, t has 1a+3c)");
+        Console.WriteLine($"         {(result4 == false ? "✓ PASSED" : "✗ FAILED")}\n");
     }
 }
 
