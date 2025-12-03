@@ -1,5 +1,5 @@
 using System;
-using DSA._2_6_IntersectionOfTwoArrays_Easy;
+using DSA._1_5_GroupAnagrams_Medium;
 
 namespace DSA;
 
@@ -34,7 +34,7 @@ class Program
         // ValidAnagram.Test();
         
         // using DSA._1_5_GroupAnagrams_Medium;
-        // GroupAnagrams.Test();
+         GroupAnagrams.Test();
         
         // using DSA._1_6_TopKFrequent_Medium;
         // TopKFrequent.Test();
@@ -67,7 +67,7 @@ class Program
         // TwoSumDictionary.Test();
         
         // using DSA._2_6_IntersectionOfTwoArrays_Easy;
-         IntersectionOfTwoArrays.Test();
+        // IntersectionOfTwoArrays.Test();
         
         // using DSA._2_7_FrequencySort_Medium;
         // FrequencySort.Test();

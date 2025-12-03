@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace DSA._1_5_GroupAnagrams_Medium;
@@ -25,8 +26,32 @@ public class GroupAnagrams
         // Hint: Use Dictionary with sorted string as key, List as value
         // Time Complexity: O(n * k log k) where k is average string length
         // Space Complexity: O(n * k)
-        
-        return new List<IList<string>>();
+        var result = new List<IList<string>>();
+        var dict = new Dictionary<string, List<string>>();
+
+        for (int i = 0; i < strs.Length; i++)
+        {
+            var charArr = strs[i].ToCharArray();
+            Array.Sort(charArr);
+            var sortedKey = new string(charArr);
+
+            if (dict.TryGetValue(sortedKey, out var index))
+            {
+                index.Add(strs[i]);
+            }
+            else
+            {
+                dict[sortedKey] = [strs[i]];
+            }
+            
+        }
+
+        foreach (var value in dict.Values)
+        {
+            result.Add(value);
+        }
+
+        return result;
     }
     
     public static void Test()
@@ -48,6 +73,22 @@ public class GroupAnagrams
         Console.WriteLine($"         Output: {result2.Count} groups, Expected: 1 group");
         bool passed2 = result2.Count == 1;
         Console.WriteLine($"         {(passed2 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 3: Empty strings
+        string[] test3 = { "", "" };
+        var result3 = Solution(test3);
+        Console.WriteLine($"Test 3 - Input: [\"\", \"\"]");
+        Console.WriteLine($"         Output: {result3.Count} groups, Expected: 1 group");
+        bool passed3 = result3.Count == 1 && result3[0].Count == 2;
+        Console.WriteLine($"         {(passed3 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 4: All strings are anagrams of each other
+        string[] test4 = { "listen", "silent", "enlist", "tinsel" };
+        var result4 = Solution(test4);
+        Console.WriteLine($"Test 4 - Input: [\"listen\", \"silent\", \"enlist\", \"tinsel\"]");
+        Console.WriteLine($"         Output: {result4.Count} groups, Expected: 1 group");
+        bool passed4 = result4.Count == 1 && result4[0].Count == 4;
+        Console.WriteLine($"         {(passed4 ? "✓ PASSED" : "✗ FAILED")}\n");
     }
 }
 
