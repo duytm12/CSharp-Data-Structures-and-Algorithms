@@ -1,5 +1,5 @@
 using System;
-using DSA._1_4_ValidAnagram_Easy;
+using DSA._1_7_EncodeAndDecodeStrings_Medium;
 
 namespace DSA;
 
@@ -31,7 +31,7 @@ class Program
         //ProductExceptSelf.Test();
         
         // using DSA._1_4_ValidAnagram_Easy;
-        ValidAnagram.Test();
+        // ValidAnagram.Test();
         
         // using DSA._1_5_GroupAnagrams_Medium;
         // GroupAnagrams.Test();
@@ -40,7 +40,7 @@ class Program
         // TopKFrequentElements.Test();
         
         // using DSA._1_7_EncodeAndDecodeStrings_Medium;
-        // EncodeAndDecodeStrings.Test();
+         Codec.Test();
         
         // using DSA._1_8_LongestConsecutiveSequence_Medium;
         // LongestConsecutiveSequence.Test();
