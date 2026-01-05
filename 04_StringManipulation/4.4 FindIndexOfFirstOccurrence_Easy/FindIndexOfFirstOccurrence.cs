@@ -45,7 +45,7 @@ public class FindIndexOfFirstOccurrence
             if (haystack[i] == needle[0])
             {
                 int j = 1;
-                while (j < needle.Length && haystack[i + j] == needle[j])
+                while (haystack[i + j] == needle[j] || j < needle.Length)
                 {
                     j++;
                 }
@@ -53,6 +53,8 @@ public class FindIndexOfFirstOccurrence
             }
         }
         return -1;
+
+
     }
     
     public static void Test()
