@@ -40,21 +40,28 @@ public class FindIndexOfFirstOccurrence
 
         // Solution 2: Sliding window
 
+        // for (int i = 0; i <= haystack.Length - needle.Length; i++)
+        // {
+        //     if (haystack[i] == needle[0])
+        //     {
+        //         int j = 1;
+        //         while (j < needle.Length && haystack[i + j] == needle[j])
+        //         {
+        //             j++;
+        //         }
+        //         if (j == needle.Length) return i;
+        //     }
+        // }
+        // return -1;
+
+        // Solution 3: Substring
+
         for (int i = 0; i <= haystack.Length - needle.Length; i++)
         {
-            if (haystack[i] == needle[0])
-            {
-                int j = 1;
-                while (haystack[i + j] == needle[j] || j < needle.Length)
-                {
-                    j++;
-                }
-                if (j == needle.Length) return i;
-            }
+            if (haystack.Substring(i, needle.Length) == needle) return i;
         }
+
         return -1;
-
-
     }
     
     public static void Test()
