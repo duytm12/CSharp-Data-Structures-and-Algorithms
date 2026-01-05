@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace DSA._4_4_FindIndexOfFirstOccurrence_Easy;
 
@@ -30,13 +31,28 @@ public class FindIndexOfFirstOccurrence
         // Time Complexity: O(n * m) where n = haystack.length, m = needle.length
         // Space Complexity: O(1)
 
-        // Solution 1: 
-        if (haystack.Length == 0 || needle.Length == 0 || needle.Length > haystack.Length) return -1;
+        // Solution 1: Built-in IndexOf
+        if (haystack.Length == 0 || needle.Length > haystack.Length) return -1;
 
-        if (needle == haystack) return 0;
+        if (string.IsNullOrWhiteSpace(needle) || needle == haystack) return 0;
 
-        return haystack.IndexOf(needle);
-        
+        // return haystack.IndexOf(needle);
+
+        // Solution 2: Sliding window
+
+        for (int i = 0; i <= haystack.Length - needle.Length; i++)
+        {
+            if (haystack[i] == needle[0])
+            {
+                int j = 1;
+                while (j < needle.Length && haystack[i + j] == needle[j])
+                {
+                    j++;
+                }
+                if (j == needle.Length) return i;
+            }
+        }
+        return -1;
     }
     
     public static void Test()
