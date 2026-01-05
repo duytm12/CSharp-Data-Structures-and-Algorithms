@@ -21,15 +21,11 @@ public class ContainsDuplicate
 {
     public static bool Solution(int[] nums)
     {
-        // Array.Sort(nums);
-        // // Solution 1
-        // for (int i =0; i < nums.Length; i++)
-        // {
-        //     for (int j = i+1; j<nums.Length; j++)
-        //     {
-        //         if (nums[i]==nums[j]) return true;
-        //     }
-        // }
+
+        // Solution 1:
+        //Array.Sort(nums);
+
+
 
 
 
@@ -46,7 +42,7 @@ public class ContainsDuplicate
         // return seen.Count < nums.Length;
 
         // Solution 2.2: Using LinQ .ToHashSet() function.
-        return nums.ToHashSet().Count < nums.Length;
+        //return nums.ToHashSet().Count < nums.Length;
 
         // Approach:
         // 1. We need to check if any number appears more than once
@@ -58,7 +54,7 @@ public class ContainsDuplicate
         // Time Complexity: Try to achieve O(n)
         // Space Complexity: Try to achieve O(n)
 
-    // return false; 
+         return false; 
     }
     
     public static void Test()

@@ -1,5 +1,5 @@
 using System;
-using DSA._1_7_EncodeAndDecodeStrings_Medium;
+using DSA._4_4_FindIndexOfFirstOccurrence_Easy;
 
 namespace DSA;
 
@@ -22,7 +22,7 @@ class Program
         // 01. Arrays & Hashing (9 problems)
         // ============================================
         // using DSA._1_1_ContainsDuplicate_Easy;
-        // ContainsDuplicate.Test();
+         // ContainsDuplicate.Test();
         
         // using DSA._1_2_TwoSum_Easy;
         // TwoSum.Test();
@@ -40,7 +40,7 @@ class Program
         // TopKFrequentElements.Test();
         
         // using DSA._1_7_EncodeAndDecodeStrings_Medium;
-         Codec.Test();
+        // Codec.Test();
         
         // using DSA._1_8_LongestConsecutiveSequence_Medium;
         // LongestConsecutiveSequence.Test();
@@ -97,7 +97,7 @@ class Program
         // ValidPalindromeII.Test();
         
         // ============================================
-        // 04. String Manipulation (3 problems)
+        // 04. String Manipulation (4 problems)
         // ============================================
         // using DSA._4_1_ReverseString_Easy;
         // ReverseString.Test();
@@ -107,6 +107,9 @@ class Program
         
         // using DSA._4_3_LongestSubstringWithoutRepeating_Medium;
         // LongestSubstringWithoutRepeating.Test();
+        
+        // using DSA._4_4_FindIndexOfFirstOccurrence_Easy;
+         FindIndexOfFirstOccurrence.Test();
         
         // ============================================
         // 05. Binary Search (7 problems)
