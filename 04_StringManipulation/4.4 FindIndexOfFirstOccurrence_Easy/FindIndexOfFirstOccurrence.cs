@@ -62,6 +62,7 @@ public class FindIndexOfFirstOccurrence
         }
 
         return -1;
+        
     }
     
     public static void Test()

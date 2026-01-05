@@ -1,6 +1,5 @@
 using System;
-using DSA._4_4_FindIndexOfFirstOccurrence_Easy;
-
+using DSA._5_1_BinarySearch_Easy;
 namespace DSA;
 
 /// <summary>
@@ -109,13 +108,13 @@ class Program
         // LongestSubstringWithoutRepeating.Test();
         
         // using DSA._4_4_FindIndexOfFirstOccurrence_Easy;
-         FindIndexOfFirstOccurrence.Test();
+        // FindIndexOfFirstOccurrence.Test();
         
         // ============================================
         // 05. Binary Search (7 problems)
         // ============================================
         // using DSA._5_1_BinarySearch_Easy;
-        // BinarySearch.Test();
+         BinarySearch.Test();
         
         // using DSA._5_2_SearchInRotatedSortedArray_Medium;
         // SearchInRotatedSortedArray.Test();
