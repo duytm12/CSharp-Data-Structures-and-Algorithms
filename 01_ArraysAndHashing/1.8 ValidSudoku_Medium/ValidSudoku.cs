@@ -39,9 +39,27 @@ public class ValidSudoku
         // Time Complexity: O(1) - fixed 9x9 board
         // Space Complexity: O(1) - fixed size
 
+        var seen = new HashSet<string>();
+
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                char cell = board[i][j];
+
+                if (cell == '.') continue;
+
+                int box = (i / 3) * 3 + (j / 3);
+
+                if (!seen.Add($"r{i}{cell}") || !seen.Add($"c{j}{cell}") || !seen.Add($"b{box}{cell}"))
+                {
+                    return false;
+                }
+
+            }
+        }
         
-        
-        return false;
+        return true;
     }
     
     public static void Test()

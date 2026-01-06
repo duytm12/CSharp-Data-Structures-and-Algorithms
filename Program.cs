@@ -1,5 +1,5 @@
 using System;
-using DSA._5_1_BinarySearch_Easy;
+using DSA._1_8_ValidSudoku_Medium;
 namespace DSA;
 
 /// <summary>
@@ -21,7 +21,7 @@ class Program
         // 01. Arrays & Hashing (9 problems)
         // ============================================
         // using DSA._1_1_ContainsDuplicate_Easy;
-         // ContainsDuplicate.Test();
+        // ContainsDuplicate.Test();
         
         // using DSA._1_2_TwoSum_Easy;
         // TwoSum.Test();
@@ -45,7 +45,7 @@ class Program
         // LongestConsecutiveSequence.Test();
         
         // using DSA._1_9_ValidSudoku_Medium;
-        // ValidSudoku.Test();
+         ValidSudoku.Test();
         
         // ============================================
         // 02. C# Collections (9 problems)
@@ -114,7 +114,7 @@ class Program
         // 05. Binary Search (7 problems)
         // ============================================
         // using DSA._5_1_BinarySearch_Easy;
-         BinarySearch.Test();
+        // BinarySearch.Test();
         
         // using DSA._5_2_SearchInRotatedSortedArray_Medium;
         // SearchInRotatedSortedArray.Test();
