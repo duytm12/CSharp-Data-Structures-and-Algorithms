@@ -36,29 +36,31 @@ public class ReverseWordsInString
 {
     public static string Solution(string s)
     {
-        // TODO: Implement solution
-        // Hint: Split by spaces, filter empty strings, reverse, join with single space
-        // Time Complexity: O(n)
-        // Space Complexity: O(n)
-        // Split by spaces (may contain empty strings from multiple spaces)
-        var wordArray = s.Split(' ');
-        
-        // Build result by iterating backwards, skipping empty strings
-        var result = new StringBuilder();
-        for (int i = wordArray.Length - 1; i >= 0; i--)
-        {
-            // Skip empty strings
-            if (string.IsNullOrWhiteSpace(wordArray[i]))
-                continue;
-            
-            // Add space between words (not before first word)
-            if (result.Length > 0)
-                result.Append(" ");
-            
-            result.Append(wordArray[i]);
-        }
-        
-        return result.ToString();
+        // Solution 1: String.Split and Sb.Append 
+
+        // var wordArray = s.Split(' ');
+
+        // // Build result by iterating backwards, skipping empty strings
+        // var result = new StringBuilder();
+        // for (int i = wordArray.Length - 1; i >= 0; i--)
+        // {
+        //     // Skip empty strings
+        //     if (string.IsNullOrWhiteSpace(wordArray[i]))
+        //         continue;
+
+        //     // Add space between words (not before first word)
+        //     if (result.Length > 0)
+        //         result.Append(" ");
+
+        //     result.Append(wordArray[i]);
+        // }
+
+        // return result.ToString();
+
+        // Solution 2: String.Split with StringSplitOptions.RemoveEmptyEntries
+
+        var words = s.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+        return string.Join(" ", words.Reverse());
     }
     
     public static void Test()
