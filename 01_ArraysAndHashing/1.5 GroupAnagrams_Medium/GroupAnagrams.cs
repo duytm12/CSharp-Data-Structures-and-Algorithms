@@ -26,32 +26,8 @@ public class GroupAnagrams
         // Hint: Use Dictionary with sorted string as key, List as value
         // Time Complexity: O(n * k log k) where k is average string length
         // Space Complexity: O(n * k)
-        var result = new List<IList<string>>();
-        var dict = new Dictionary<string, List<string>>();
 
-        for (int i = 0; i < strs.Length; i++)
-        {
-            var charArr = strs[i].ToCharArray();
-            Array.Sort(charArr);
-            var sortedKey = new string(charArr);
-
-            if (dict.TryGetValue(sortedKey, out var index))
-            {
-                index.Add(strs[i]);
-            }
-            else
-            {
-                dict[sortedKey] = [strs[i]];
-            }
-            
-        }
-
-        foreach (var value in dict.Values)
-        {
-            result.Add(value);
-        }
-
-        return result;
+        return [];
     }
     
     public static void Test()

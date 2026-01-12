@@ -1,5 +1,5 @@
 using System;
-using DSA._4_5_ReverseWordsInString_Medium;
+using DSA._1_5_GroupAnagrams_Medium;
 
 namespace DSA;
 
@@ -28,13 +28,13 @@ class Program
         // TwoSum.Test();
 
         // using DSA._1_3_ProductExceptSelf_Medium;
-        //ProductExceptSelf.Test();
+        // ProductExceptSelf.Test();
 
         // using DSA._1_4_ValidAnagram_Easy;
         // ValidAnagram.Test();
 
         // using DSA._1_5_GroupAnagrams_Medium;
-        // GroupAnagrams.Test();
+        GroupAnagrams.Test();
 
         // using DSA._1_6_TopKFrequent_Medium;
         // TopKFrequentElements.Test();
@@ -113,7 +113,7 @@ class Program
         // FindIndexOfFirstOccurrence.Test();
         
         // using DSA._4_5_ReverseWordsInString_Medium;
-         ReverseWordsInString.Test();
+        // ReverseWordsInString.Test();
         
         // ============================================
         // 05. Binary Search (7 problems)

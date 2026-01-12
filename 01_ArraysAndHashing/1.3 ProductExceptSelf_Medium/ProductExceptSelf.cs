@@ -28,46 +28,33 @@ public class ProductExceptSelf
         // Time Complexity: O(n)
         // Space Complexity: O(1) excluding output array
 
-        // 1. Brute Force
 
-        // var result = new int[nums.Length];
+
         // for (int i = 0; i < nums.Length; i++)
         // {
-        //     int product = 1;
+        //     var product = 1;
         //     for (int j = 0; j < nums.Length; j++)
         //     {
-        //         if (i != j)
-        //         {
-        //             product *= nums[j];
-        //         }
+        //         if (i != j) product *= nums[j];
         //     }
         //     result[i] = product;
         // }
-        // return result;
-
-
-
-        // 2. Optimized: Prefix and Suffix Products
-        // Time Complexity: O(n) - two passes through the array
-        // Space Complexity: O(1) - only using result array (doesn't count as extra space)
 
         var result = new int[nums.Length];
         result[0] = 1;
-
         for (int i = 1; i < nums.Length; i++)
         {
             result[i] = result[i - 1] * nums[i - 1];
         }
 
-        int suffix = 1;
-
+        var suffix = 1;
         for (int i = nums.Length - 1; i >= 0; i--)
         {
             result[i] *= suffix;
             suffix *= nums[i];
         }
-        return result;
 
+        return result;
     }
 
  
@@ -96,6 +83,26 @@ public class ProductExceptSelf
         bool passed2 = result2.Length == expected2.Length &&
                        result2[0] == expected2[0] && result2[2] == expected2[2];
         Console.WriteLine($"         {(passed2 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 3: Minimum size array (2 elements)
+        int[] test3 = { 2, 3 };
+        int[] result3 = Solution(test3);
+        int[] expected3 = { 3, 2 };
+        Console.WriteLine($"Test 3 - Input: [2, 3]");
+        Console.WriteLine($"         Output: [{string.Join(", ", result3)}], Expected: [{string.Join(", ", expected3)}]");
+        bool passed3 = result3.Length == expected3.Length &&
+                       result3[0] == expected3[0] && result3[1] == expected3[1];
+        Console.WriteLine($"         {(passed3 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 4: Array with multiple zeros
+        int[] test4 = { 0, 0, 2, 3 };
+        int[] result4 = Solution(test4);
+        int[] expected4 = { 0, 0, 0, 0 };
+        Console.WriteLine($"Test 4 - Input: [0, 0, 2, 3]");
+        Console.WriteLine($"         Output: [{string.Join(", ", result4)}], Expected: [{string.Join(", ", expected4)}]");
+        bool passed4 = result4.Length == expected4.Length &&
+                       result4.All(x => x == 0);
+        Console.WriteLine($"         {(passed4 ? "✓ PASSED" : "✗ FAILED")}\n");
     }
 }
 

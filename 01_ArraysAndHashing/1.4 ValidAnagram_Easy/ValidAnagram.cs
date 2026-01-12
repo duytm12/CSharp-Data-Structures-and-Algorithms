@@ -25,31 +25,25 @@ public class ValidAnagram
         // Time Complexity: O(n) where n is the length of the strings
         // Space Complexity: O(1) - at most 26 characters (lowercase English letters)
 
-        // If lengths differ, they can't be anagrams
         if (s.Length != t.Length) return false;
 
-        // Use a single dictionary to count character frequencies
-        // Increment for characters in s, decrement for characters in t
-        var charCount = new Dictionary<char, int>();
+        var dict = new Dictionary<char, int>();
 
         for (int i = 0; i < s.Length; i++)
         {
-            charCount[s[i]] = charCount.GetValueOrDefault(s[i], 0) + 1;
+            dict[s[i]] = dict.GetValueOrDefault(s[i], 0) +1;
         }
 
         for (int i = 0; i < t.Length; i++)
         {
-            if (!charCount.ContainsKey(t[i]))
-            {
-                return false;
-            }
-            charCount[t[i]]--;
+            if (!dict.ContainsKey(t[i])) return false;
 
-            if (charCount[t[i]] < 0) return false;
+            dict[t[i]]--;
+
+            if (dict[t[i]] < 0) return false;
         }
-        
-        // Verify all counts are zero (all characters from s were matched in t)
-        return charCount.Values.All(count => count == 0);
+
+        return dict.Values.All(count => count == 0);
     }
 
     public static void Test()

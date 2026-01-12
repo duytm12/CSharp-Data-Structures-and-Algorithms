@@ -25,8 +25,25 @@ public class LongestConsecutiveSequence
         // Hint: Use HashSet, find sequence starts (numbers without num-1), then expand
         // Time Complexity: O(n)
         // Space Complexity: O(n)
+
+        if (nums.Length == 0) return 0;
+
+        int maxLength = 1;
+        int currentLength = 1;
+
+        var hs = nums.ToHashSet().OrderBy(x => x).ToArray(); // hs = [1,2,3,4,100,200]
+
+        for (int i = 0; i < hs.Length - 1; i++)
+        {
+            if (hs[i - 1] == hs[i] - 1) currentLength++;
+            else
+            {
+                maxLength = Math.Max(maxLength, currentLength);
+                currentLength = 1;
+            }
+        }
         
-        return 0;
+        return Math.Max(maxLength, currentLength);
     }
     
     public static void Test()

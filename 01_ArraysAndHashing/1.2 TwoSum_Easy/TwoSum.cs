@@ -43,34 +43,31 @@ public class TwoSum
         // Time Complexity: Try to achieve O(n)
         // Space Complexity: Try to achieve O(n)
 
-        // 1. Brute Force
         // for (int i = 0; i < nums.Length; i++)
         // {
-        //     for (int j = i + 1; j < nums.Length; j++)
+        //     int cummulation = target - nums[i]; 
+
+        //     for (int j = 1; j < nums.Length; j++)
         //     {
-        //         int remaining = target - nums[i];
-        //         if (remaining == nums[j])
-        //         {
-        //             return [i, j];
-        //         }
-
+        //         if (nums[j] == cummulation) return [i,j];
         //     }
-
         // }
 
-        // 2.1 Dictionary
-        var dict = new Dictionary<int,int>();
+        var dict = new Dictionary<int, int>(nums.Length);
 
         for (int i = 0; i < nums.Length; i++)
         {
             int complement = target - nums[i];
+
             if (dict.TryGetValue(complement, out int complementIndex))
             {
-                return [complementIndex, i];
+                return [i, complementIndex];
             }
+            
             dict[nums[i]] = i;
-
+            
         }
+
 
         return [];
 
@@ -101,6 +98,24 @@ public class TwoSum
         Console.WriteLine($"         Output: [{result2[0]}, {result2[1]}], Expected: [1, 2]");
         bool passed2 = (result2.Length == 2 && test2[result2[0]] + test2[result2[1]] == target2);
         Console.WriteLine($"         {(passed2 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 3: Negative numbers
+        int[] test3 = { -1, -2, -3, -4, -5 };
+        int target3 = -8;
+        int[] result3 = Solution(test3, target3);
+        Console.WriteLine($"Test 3 - Input: nums = [-1, -2, -3, -4, -5], target = {target3}");
+        Console.WriteLine($"         Output: [{result3[0]}, {result3[1]}], Expected: [2, 4]");
+        bool passed3 = (result3.Length == 2 && result3[0] != result3[1] && test3[result3[0]] + test3[result3[1]] == target3);
+        Console.WriteLine($"         {(passed3 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 4: Duplicate numbers (same value at different indices)
+        int[] test4 = { 3, 3 };
+        int target4 = 6;
+        int[] result4 = Solution(test4, target4);
+        Console.WriteLine($"Test 4 - Input: nums = [3, 3], target = {target4}");
+        Console.WriteLine($"         Output: [{result4[0]}, {result4[1]}], Expected: [0, 1]");
+        bool passed4 = (result4.Length == 2 && result4[0] != result4[1] && test4[result4[0]] + test4[result4[1]] == target4);
+        Console.WriteLine($"         {(passed4 ? "✓ PASSED" : "✗ FAILED")}\n");
     }
 }
 
