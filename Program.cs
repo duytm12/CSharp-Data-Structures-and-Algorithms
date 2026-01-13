@@ -1,5 +1,5 @@
 using System;
-using DSA._2_4_RemoveDuplicates_Easy;
+using DSA._2_5_TwoSumDictionary_Easy;
 
 
 namespace DSA;
@@ -63,10 +63,10 @@ class Program
         // GroupAnagrams.Test();
         
         // using DSA._2_4_RemoveDuplicates_Easy;
-        RemoveDuplicates.Test();
+        // RemoveDuplicates.Test();
         
         // using DSA._2_5_TwoSumDictionary_Easy;
-        // TwoSumDictionary.Test();
+        TwoSumDictionary.Test();
         
         // using DSA._2_6_IntersectionOfTwoArrays_Easy;
         // IntersectionOfTwoArrays.Test();

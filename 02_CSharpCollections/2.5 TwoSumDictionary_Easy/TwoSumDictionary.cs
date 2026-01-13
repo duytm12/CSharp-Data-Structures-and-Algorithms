@@ -27,19 +27,20 @@ public class TwoSumDictionary
         // Hint: Use Dictionary to store complement (target - current number) and its index
         // Time Complexity: O(n)
         // Space Complexity: O(n)
-
         var dict = new Dictionary<int, int>();
         for (int i = 0; i < nums.Length; i++)
         {
             var complement = target - nums[i];
-            if (dict.TryGetValue(complement, out int index))
+            if (!dict.TryGetValue(complement, out var compIndex))
             {
-                return [index, i];
+                dict[complement] = compIndex;
             }
-            dict[nums[i]] = i;
+            return [i, compIndex];
         }
-        
+
         return [];
+
+
     }
     
     public static void Test()
