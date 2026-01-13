@@ -35,16 +35,13 @@ public class GroupAnagrams
             Array.Sort(charArr);
             var sortedKey = new string(charArr);
 
-
-            if (dict.TryGetValue(sortedKey, out var index))
+            if (!dict.TryGetValue(sortedKey, out var values))
             {
-                index.Add(strs[i]);
-            }
-            else
-            {
+                values = [];
                 dict[sortedKey] = [strs[i]];
+                
             }
-            
+            values.Add(strs[i]);
         }
 
         foreach (var value in dict.Values)
@@ -53,6 +50,7 @@ public class GroupAnagrams
         }
 
         return result;
+        
     }
     
     public static void Test()
