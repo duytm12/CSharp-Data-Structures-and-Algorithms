@@ -26,24 +26,49 @@ public class LongestConsecutiveSequence
         // Time Complexity: O(n)
         // Space Complexity: O(n)
 
+
+        // 1. HashSet - Order
         if (nums.Length == 0) return 0;
 
-        int maxLength = 1;
-        int currentLength = 1;
+        // int maxLength = 1;
+        // int currentLength = 1;
 
-        var hs = nums.ToHashSet().OrderBy(x => x).ToArray(); // hs = [1,2,3,4,100,200]
+        // var hs = nums.ToHashSet().OrderBy(x =>x).ToArray();
 
-        for (int i = 0; i < hs.Length - 1; i++)
+        // for (int i = 1; i < hs.Length; i++)
+        // {
+        //     if (hs[i] - hs[i - 1] == 1)
+        //     {
+        //         currentLength++;
+        //         maxLength = Math.Max(currentLength, maxLength);
+        //     }
+        //     else currentLength = 1;
+        // }
+
+        // return Math.Max(currentLength, maxLength);
+
+        // 2. HashSet, not order
+        var hs = new HashSet<int>(nums);
+        var maxLength = 0;
+
+        foreach (var num in hs)
         {
-            if (hs[i - 1] == hs[i] - 1) currentLength++;
-            else
+            if (!hs.Contains(num - 1))
             {
+                var currentNum = num;
+                var currentLength = 1;
+
+                while (hs.Contains(currentNum + 1))
+                {
+                    currentLength++;
+                    currentNum++;
+                }
+
                 maxLength = Math.Max(maxLength, currentLength);
-                currentLength = 1;
             }
         }
-        
-        return Math.Max(maxLength, currentLength);
+        return maxLength;
+
     }
     
     public static void Test()

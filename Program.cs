@@ -1,5 +1,5 @@
 using System;
-using DSA._1_7_EncodeAndDecodeStrings_Medium;
+using DSA._1_9_LongestConsecutiveSequence_Medium;
 
 
 namespace DSA;
@@ -41,13 +41,13 @@ class Program
         // TopKFrequentElements.Test();
 
         // using DSA._1_7_EncodeAndDecodeStrings_Medium;
-        Codec.Test();
+        // Codec.Test();
         
         // using DSA._1_8_ValidSudoku_Medium;
         // ValidSudoku.Test();
         
         // using DSA._1_9_LongestConsecutiveSequence_Medium;
-        // LongestConsecutiveSequence.Test();
+        LongestConsecutiveSequence.Test();
         
 
         // ============================================
