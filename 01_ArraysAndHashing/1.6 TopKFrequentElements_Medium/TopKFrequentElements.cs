@@ -28,15 +28,17 @@ public class TopKFrequentElements
         // Time Complexity: O(n + k log k) or O(n) with bucket sort
         // Space Complexity: O(n)
 
-        // Step 1: Count frequencies
+        var result = new int[k];
         var dict = new Dictionary<int, int>();
 
         for (int i = 0; i < nums.Length; i++)
         {
-            dict[nums[i]] = dict.GetValueOrDefault(nums[i], 0) +1;
+            dict[nums[i]] = dict.GetValueOrDefault(nums[i], 0) + 1;
         }
 
-        return dict.OrderByDescending(x => x.Value).Take(k).Select(y => y.Key).ToArray();
+        result = dict.OrderByDescending(x => x.Value).Take(k).Select(x => x.Key).ToArray();
+
+        return result;
 
     }
     

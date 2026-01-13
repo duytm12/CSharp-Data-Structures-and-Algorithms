@@ -1,5 +1,6 @@
 using System;
-using DSA._1_5_GroupAnagrams_Medium;
+using DSA._1_6_TopKFrequentElements_Medium;
+
 
 namespace DSA;
 
@@ -34,10 +35,10 @@ class Program
         // ValidAnagram.Test();
 
         // using DSA._1_5_GroupAnagrams_Medium;
-        GroupAnagrams.Test();
+        // GroupAnagrams.Test();
 
-        // using DSA._1_6_TopKFrequent_Medium;
-        // TopKFrequentElements.Test();
+        // using DSA._1_6_TopKFrequentElements_Medium;
+        TopKFrequentElements.Test();
 
         // using DSA._1_7_EncodeAndDecodeStrings_Medium;
         // Codec.Test();
