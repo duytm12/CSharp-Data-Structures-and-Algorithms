@@ -1,5 +1,5 @@
 using System;
-using DSA._1_6_TopKFrequentElements_Medium;
+using DSA._1_7_EncodeAndDecodeStrings_Medium;
 
 
 namespace DSA;
@@ -38,10 +38,10 @@ class Program
         // GroupAnagrams.Test();
 
         // using DSA._1_6_TopKFrequentElements_Medium;
-        TopKFrequentElements.Test();
+        // TopKFrequentElements.Test();
 
         // using DSA._1_7_EncodeAndDecodeStrings_Medium;
-        // Codec.Test();
+        Codec.Test();
         
         // using DSA._1_8_ValidSudoku_Medium;
         // ValidSudoku.Test();
