@@ -29,19 +29,34 @@ public class ValidAnagram
 
         var dict = new Dictionary<char, int>();
 
+        // 2 loops
+
+        // for (int i = 0; i < s.Length; i++)
+        // {
+        //     dict[s[i]] = dict.GetValueOrDefault(s[i], 0) +1;
+        // }
+
+        // for (int i = 0; i < t.Length; i++)
+        // {
+        //     if (!dict.ContainsKey(t[i])) return false;
+
+        //     dict[t[i]]--;
+
+        //     if (dict[t[i]] < 0) return false;
+        // }
+
+        // 1 loop
+
         for (int i = 0; i < s.Length; i++)
         {
-            dict[s[i]] = dict.GetValueOrDefault(s[i], 0) +1;
+            // Increment for s[i]
+            dict[s[i]] = dict.GetValueOrDefault(s[i], 0) + 1;
+            
+            // Decrement for t[i]
+            dict[t[i]] = dict.GetValueOrDefault(t[i], 0) - 1;
         }
 
-        for (int i = 0; i < t.Length; i++)
-        {
-            if (!dict.ContainsKey(t[i])) return false;
-
-            dict[t[i]]--;
-
-            if (dict[t[i]] < 0) return false;
-        }
+        
 
         return dict.Values.All(count => count == 0);
     }

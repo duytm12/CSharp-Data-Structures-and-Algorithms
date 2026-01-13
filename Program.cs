@@ -1,5 +1,5 @@
 using System;
-using DSA._1_5_GroupAnagrams_Medium;
+using DSA._1_4_ValidAnagram_Easy;
 
 namespace DSA;
 
@@ -31,10 +31,10 @@ class Program
         // ProductExceptSelf.Test();
 
         // using DSA._1_4_ValidAnagram_Easy;
-        // ValidAnagram.Test();
+        ValidAnagram.Test();
 
         // using DSA._1_5_GroupAnagrams_Medium;
-        GroupAnagrams.Test();
+        // GroupAnagrams.Test();
 
         // using DSA._1_6_TopKFrequent_Medium;
         // TopKFrequentElements.Test();
