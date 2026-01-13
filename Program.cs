@@ -1,5 +1,5 @@
 using System;
-using DSA._1_4_ValidAnagram_Easy;
+using DSA._3_1_ValidPalindrome_Easy;
 
 namespace DSA;
 
@@ -31,7 +31,7 @@ class Program
         // ProductExceptSelf.Test();
 
         // using DSA._1_4_ValidAnagram_Easy;
-        ValidAnagram.Test();
+        // ValidAnagram.Test();
 
         // using DSA._1_5_GroupAnagrams_Medium;
         // GroupAnagrams.Test();
@@ -83,7 +83,7 @@ class Program
         // 03. Two Pointers (5 problems)
         // ============================================
         // using DSA._3_1_ValidPalindrome_Easy;
-        // ValidPalindrome.Test();
+        ValidPalindrome.Test();
         
         // using DSA._3_2_ContainerWithMostWater_Medium;
         // ContainerWithMostWater.Test();
