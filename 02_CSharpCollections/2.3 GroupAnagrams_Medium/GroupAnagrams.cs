@@ -19,57 +19,35 @@ namespace DSA._2_3_GroupAnagrams_Medium;
 /// </summary>
 public class GroupAnagrams
 {
-    public static IList<IList<string>> Solution(string[] strs)
+    public static List<IList<string>> Solution(string[] strs)
     {
         // TODO: Implement solution
         // Hint: Use Dictionary with sorted string as key, List as value
         // Time Complexity: O(n * k log k) where k is average string length
         // Space Complexity: O(n * k)
 
-        // var dict = new Dictionary<string, List<string>>();
-
-        // for (int i = 0; i < strs.Length; i++)
-        // {
-        //     var charArr = strs[i].ToCharArray();
-        //     Array.Sort(charArr);
-        //     var sortedArray = new string(charArr);
-
-        //     if (!dict.TryGetValue(sortedArray, out var list))
-        //     {
-        //         dict[sortedArray] = list = [];
-        //     }
-        //     list.Add(strs[i]);
-        // }
-
-        // var result = new List<string[]>();
-        // foreach (var list in dict.Values)
-        // {
-        //     result.Add(list.ToArray());
-        // }
-
-        // return result;
-
+        var result = new List<IList<string>>();
         var dict = new Dictionary<string, List<string>>();
 
-        for (int i = 0; i < strs.Length; i++)
+        foreach (var str in strs)
         {
-            var charArr = strs[i].ToCharArray();
+            var charArr = str.ToCharArray();
             Array.Sort(charArr);
             var sortedKey = new string(charArr);
 
-            if (!dict.TryGetValue(sortedKey, out var list))
+            if (!dict.TryGetValue(str, out var vals))
             {
-                dict[sortedKey] = list = [];
+                vals = [];
+                dict[sortedKey] = vals;
             }
-            list.Add(strs[i]);
-        }
-        var result = new List<IList<string>>();
-        foreach (var list in dict.Values)
-        {
-            result.Add(list.ToArray());
+            vals.Add(str);
         }
 
+        foreach (var val in dict.Values) result.Add(val);
+
         return result;
+
+
     }
     
     public static void Test()

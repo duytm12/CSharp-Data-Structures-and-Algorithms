@@ -19,15 +19,16 @@ public class CharacterFrequency
         // Hint: Use Dictionary.TryGetValue or Dictionary.ContainsKey
         // Time Complexity: O(n)
         // Space Complexity: O(k) where k is number of unique characters
+        var dict = new Dictionary<char, int>();
+        var charArr = s.ToCharArray();
 
-        var result = new Dictionary<char, int>();
-
-        for (int i = 0; i < s.Length; i++)
+        foreach (var c in charArr)
         {
-            result[s[i]] = result.GetValueOrDefault(s[i], 0) + 1;
+            dict[c] = dict.GetValueOrDefault(c, 0) + 1;
         }
 
-        return result;
+        return dict;
+
     }
     
     public static void Test()
@@ -48,6 +49,26 @@ public class CharacterFrequency
         Console.WriteLine($"         Output: Dictionary with {result2.Count} entries");
         bool passed2 = result2.ContainsKey('a') && result2['a'] == 1;
         Console.WriteLine($"         {(passed2 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 3: Empty string
+        string test3 = "";
+        var result3 = Solution(test3);
+        Console.WriteLine($"Test 3 - Input: \"\"");
+        Console.WriteLine($"         Output: Dictionary with {result3.Count} entries, Expected: 0");
+        bool passed3 = result3.Count == 0;
+        Console.WriteLine($"         {(passed3 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 4: String with special characters, numbers, and spaces
+        string test4 = "Hello World! 123";
+        var result4 = Solution(test4);
+        Console.WriteLine($"Test 4 - Input: \"Hello World! 123\"");
+        Console.WriteLine($"         Output: Dictionary with {result4.Count} entries");
+        bool passed4 = result4.ContainsKey('H') && result4['H'] == 1 &&
+                       result4.ContainsKey('l') && result4['l'] == 3 &&
+                       result4.ContainsKey(' ') && result4[' '] == 2 &&
+                       result4.ContainsKey('1') && result4['1'] == 1 &&
+                       result4.ContainsKey('!') && result4['!'] == 1;
+        Console.WriteLine($"         {(passed4 ? "✓ PASSED" : "✗ FAILED")}\n");
     }
 }
 

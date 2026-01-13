@@ -1,5 +1,5 @@
 using System;
-using DSA._1_9_LongestConsecutiveSequence_Medium;
+using DSA._2_4_RemoveDuplicates_Easy;
 
 
 namespace DSA;
@@ -47,7 +47,7 @@ class Program
         // ValidSudoku.Test();
         
         // using DSA._1_9_LongestConsecutiveSequence_Medium;
-        LongestConsecutiveSequence.Test();
+        // LongestConsecutiveSequence.Test();
         
 
         // ============================================
@@ -63,7 +63,7 @@ class Program
         // GroupAnagrams.Test();
         
         // using DSA._2_4_RemoveDuplicates_Easy;
-        // RemoveDuplicates.Test();
+        RemoveDuplicates.Test();
         
         // using DSA._2_5_TwoSumDictionary_Easy;
         // TwoSumDictionary.Test();

@@ -25,11 +25,9 @@ public class RemoveDuplicates
         // Time Complexity: O(n)
         // Space Complexity: O(n)
 
-        // Using LinQ list.Distinct()
-        return [.. list.Distinct()];
+        // return [..list.ToHashSet()];
+        return [..list.Distinct()];
 
-        // Using HashSet
-        // return list.ToHashSet().ToString();
     }
     
     public static void Test()
@@ -49,6 +47,26 @@ public class RemoveDuplicates
         Console.WriteLine($"         Output: [{string.Join(", ", result2)}]");
         bool passed2 = result2.Count == 3;
         Console.WriteLine($"         {(passed2 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 3: Empty list
+        var test3 = new List<int>();
+        var result3 = Solution(test3);
+        Console.WriteLine($"Test 3 - Input: []");
+        Console.WriteLine($"         Output: [{string.Join(", ", result3)}], Expected: []");
+        bool passed3 = result3.Count == 0;
+        Console.WriteLine($"         {(passed3 ? "✓ PASSED" : "✗ FAILED")}\n");
+        
+        // Test Case 4: All same elements and negative numbers
+        var test4 = new List<int> { 5, 5, 5, 5, -1, -1, -2, 0, 0 };
+        var result4 = Solution(test4);
+        Console.WriteLine($"Test 4 - Input: [5, 5, 5, 5, -1, -1, -2, 0, 0]");
+        Console.WriteLine($"         Output: [{string.Join(", ", result4)}], Expected: [5, -1, -2, 0] (order may vary)");
+        bool passed4 = result4.Count == 4 && 
+                       result4.Contains(5) && 
+                       result4.Contains(-1) && 
+                       result4.Contains(-2) && 
+                       result4.Contains(0);
+        Console.WriteLine($"         {(passed4 ? "✓ PASSED" : "✗ FAILED")}\n");
     }
 }
 
