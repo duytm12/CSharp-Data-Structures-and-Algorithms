@@ -38,7 +38,7 @@ public class GroupAnagrams
             if (!dict.TryGetValue(sortedKey, out var values))
             {
                 values = [];
-                dict[sortedKey] = [strs[i]];
+                dict[sortedKey] = values;
                 
             }
             values.Add(strs[i]);
