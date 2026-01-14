@@ -1,5 +1,5 @@
 using System;
-using DSA._2_5_TwoSumDictionary_Easy;
+using DSA._1_10_PlusOne_Easy;
 
 
 namespace DSA;
@@ -20,7 +20,7 @@ class Program
         // Uncomment the using statement and Test() call for the problem you want to test
 
         // ============================================
-        // 01. Arrays & Hashing (9 problems)
+        // 01. Arrays & Hashing (10 problems)
         // ============================================
         // using DSA._1_1_ContainsDuplicate_Easy;
         // ContainsDuplicate.Test();
@@ -49,6 +49,9 @@ class Program
         // using DSA._1_9_LongestConsecutiveSequence_Medium;
         // LongestConsecutiveSequence.Test();
         
+        // using DSA._1_10_PlusOne_Easy;
+        PlusOne.Test();
+        
 
         // ============================================
         // 02. C# Collections (9 problems)
@@ -66,7 +69,7 @@ class Program
         // RemoveDuplicates.Test();
         
         // using DSA._2_5_TwoSumDictionary_Easy;
-        TwoSumDictionary.Test();
+        // TwoSumDictionary.Test();
         
         // using DSA._2_6_IntersectionOfTwoArrays_Easy;
         // IntersectionOfTwoArrays.Test();

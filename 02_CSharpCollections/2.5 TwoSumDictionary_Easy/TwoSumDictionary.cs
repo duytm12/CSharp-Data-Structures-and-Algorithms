@@ -28,14 +28,14 @@ public class TwoSumDictionary
         // Time Complexity: O(n)
         // Space Complexity: O(n)
         var dict = new Dictionary<int, int>();
-        for (int i = 0; i < nums.Length; i++)
+        for (int i = 0; i < nums.Length; i++) //{ 2, 7, 11, 15 } target = 9;
         {
             var complement = target - nums[i];
-            if (!dict.TryGetValue(complement, out var compIndex))
+            if (dict.TryGetValue(complement, out var compIndex))
             {
-                dict[complement] = compIndex;
+                return [i, compIndex];
             }
-            return [i, compIndex];
+            dict[nums[i]] = i;
         }
 
         return [];
