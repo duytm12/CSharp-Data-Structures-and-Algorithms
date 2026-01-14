@@ -1,6 +1,6 @@
 using System;
 using DSA._1_10_PlusOne_Easy;
-
+using DSA._1_11_MergeSortedArray_Easy;
 
 namespace DSA;
 
@@ -50,7 +50,10 @@ class Program
         // LongestConsecutiveSequence.Test();
         
         // using DSA._1_10_PlusOne_Easy;
-        PlusOne.Test();
+        // PlusOne.Test();
+
+        // using DSA._1_11_MergeSortedArray_Easy;
+        MergeSortedArray.Test();
         
 
         // ============================================
