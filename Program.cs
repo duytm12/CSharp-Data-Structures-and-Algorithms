@@ -105,22 +105,25 @@ class Program
         // ValidPalindromeII.Test();
         
         // ============================================
-        // 04. String Manipulation (5 problems)
+        // 04. String Manipulation (6 problems)
         // ============================================
         // using DSA._4_1_ReverseString_Easy;
         // ReverseString.Test();
         
-        // using DSA._4_2_ValidAnagram_Easy;
-        // ValidAnagram.Test();
+        // using DSA._4_2_LengthOfLongestSubstring_Medium;
+        // LengthOfLongestSubstring.Test();
         
-        // using DSA._4_3_LongestSubstringWithoutRepeating_Medium;
-        // LongestSubstringWithoutRepeating.Test();
+        // using DSA._4_3_MinWindowSubstring_Hard;
+        // MinWindowSubstring.Test();
         
         // using DSA._4_4_FindIndexOfFirstOccurrence_Easy;
         // FindIndexOfFirstOccurrence.Test();
         
         // using DSA._4_5_ReverseWordsInString_Medium;
         // ReverseWordsInString.Test();
+
+        // using DSA._4_6_LongestCommonPrefix_Easy;
+        // LongestCommonPrefix.Test();
         
         // ============================================
         // 05. Binary Search (7 problems)
