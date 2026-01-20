@@ -34,28 +34,29 @@ public class LongestCommonPrefix
     /// </summary>
     public static string Solution(string[] strs)
     {
-        if (strs == null || strs.Length == 0)
-            return string.Empty;
+        if (strs.Length == 1) return strs[0];
 
-        // Start with the first string as the initial prefix
-        string prefix = strs[0];
+        var firstStr = strs[0];
 
-        // Compare the prefix with each subsequent string
-        for (int i = 1; i < strs.Length && prefix.Length > 0; i++)
+        var minLen = firstStr.Length;
+
+        for (int i = 1; i < strs.Length; i++)
         {
-            string current = strs[i];
-
-            // Shrink prefix until it is a prefix of current
-            while (!current.StartsWith(prefix, StringComparison.Ordinal))
-            {
-                prefix = prefix.Substring(0, prefix.Length - 1);
-
-                if (prefix.Length == 0)
-                    return string.Empty;
-            }
+            if (strs[i].Length < minLen) minLen = strs[i].Length;
         }
 
-        return prefix;
+        var prefixIndex = 0;
+        
+        while (prefixIndex < minLen)
+        {
+            char c = firstStr[prefixIndex];
+            for (int j = 1; j < strs.Length; j++)
+            {
+                if (strs[j][prefixIndex] != c) return firstStr[..prefixIndex];
+            }
+            prefixIndex++;
+        }
+        return firstStr[..prefixIndex];
     }
 
     public static void Test()

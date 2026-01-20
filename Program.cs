@@ -1,6 +1,5 @@
 using System;
-using DSA._1_10_PlusOne_Easy;
-using DSA._1_11_MergeSortedArray_Easy;
+using DSA._4_6_LongestCommonPrefix_Easy;
 
 namespace DSA;
 
@@ -53,7 +52,7 @@ class Program
         // PlusOne.Test();
 
         // using DSA._1_11_MergeSortedArray_Easy;
-        MergeSortedArray.Test();
+        // MergeSortedArray.Test();
         
 
         // ============================================
@@ -123,7 +122,7 @@ class Program
         // ReverseWordsInString.Test();
 
         // using DSA._4_6_LongestCommonPrefix_Easy;
-        // LongestCommonPrefix.Test();
+        LongestCommonPrefix.Test();
         
         // ============================================
         // 05. Binary Search (7 problems)
