@@ -632,6 +632,33 @@ class Program
 
         // using DSA._22_9_BucketSort_Hard;
         // BucketSort.Test();
+
+        // ============================================
+        // 23. Search (8 problems)
+        // ============================================
+        // using DSA._23_1_LinearSearch_Easy;
+        // LinearSearch.Test();
+
+        // using DSA._23_2_BinarySearchIterative_Easy;
+        // BinarySearchIterative.Test();
+
+        // using DSA._23_3_BinarySearchRecursive_Easy;
+        // BinarySearchRecursive.Test();
+
+        // using DSA._23_4_TernarySearch_Medium;
+        // TernarySearch.Test();
+
+        // using DSA._23_5_JumpSearch_Medium;
+        // JumpSearch.Test();
+
+        // using DSA._23_6_ExponentialSearch_Medium;
+        // ExponentialSearch.Test();
+
+        // using DSA._23_7_InterpolationSearch_Hard;
+        // InterpolationSearch.Test();
+
+        // using DSA._23_8_FibonacciSearch_Hard;
+        // FibonacciSearch.Test();
     }
 }
 
