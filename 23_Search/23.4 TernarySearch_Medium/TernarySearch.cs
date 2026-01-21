@@ -19,6 +19,26 @@ public class TernarySearch
         // Hint: Divide array into three parts using mid1 and mid2
         // Compare target with both mid points and narrow search range
         // Return -1 if target not found
+        int left = 0;
+        int right = nums.Length - 1;
+        while (left <= right)
+        {
+            var mid1 = left + (right - left) / 3;
+            var mid2 = right - (right - left) / 3;
+
+            if (nums[mid1] == target) return mid1;
+
+            if (nums[mid2] == target) return mid2;
+
+            if (target < mid1) right = mid1 - 1;
+            else if (target > mid2) left = mid2 + 1;
+            else
+            {
+                left = mid1 + 1;
+                right = mid2 - 1;
+            }
+
+        }
         return -1;
     }
 

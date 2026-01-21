@@ -1,4 +1,4 @@
-using DSA._23_3_BinarySearchRecursive_Easy;
+using DSA._23_4_TernarySearch_Medium;
 
 namespace DSA;
 
@@ -643,10 +643,10 @@ class Program
         // BinarySearchIterative.Test();
 
         // using DSA._23_3_BinarySearchRecursive_Easy;
-        BinarySearchRecursive.Test();
+        // BinarySearchRecursive.Test();
 
         // using DSA._23_4_TernarySearch_Medium;
-        // TernarySearch.Test();
+        TernarySearch.Test();
 
         // using DSA._23_5_JumpSearch_Medium;
         // JumpSearch.Test();
