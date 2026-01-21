@@ -1,5 +1,5 @@
 using System;
-using DSA._4_6_LongestCommonPrefix_Easy;
+using DSA._15_2_JumpGame_Medium;
 
 namespace DSA;
 
@@ -122,7 +122,7 @@ class Program
         // ReverseWordsInString.Test();
 
         // using DSA._4_6_LongestCommonPrefix_Easy;
-        LongestCommonPrefix.Test();
+        // LongestCommonPrefix.Test();
         
         // ============================================
         // 05. Binary Search (7 problems)
@@ -386,7 +386,7 @@ class Program
         // BestTimeToBuySellStock.Test();
         
         // using DSA._15_2_JumpGame_Medium;
-        // JumpGame.Test();
+        JumpGame.Test();
         
         // using DSA._15_3_GasStation_Medium;
         // GasStation.Test();
