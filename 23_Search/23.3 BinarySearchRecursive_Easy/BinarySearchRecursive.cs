@@ -25,7 +25,14 @@ public class BinarySearchRecursive
     private static int BinarySearchHelper(int[] nums, int target, int left, int right)
     {
         // TODO: Implement recursive helper method
-        return -1;
+        if (left > right) return -1;
+        var mid = left + (right - left) / 2;
+        if (nums[mid] == target) return mid;
+        if (nums[mid] < target)
+            return BinarySearchHelper(nums, target, mid + 1, right);
+        else
+            return BinarySearchHelper(nums, target, left, mid - 1);
+
     }
 
     public static void Test()

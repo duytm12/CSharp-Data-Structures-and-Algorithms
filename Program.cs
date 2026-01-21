@@ -1,4 +1,4 @@
-using DSA._23_2_BinarySearchIterative_Easy;
+using DSA._23_3_BinarySearchRecursive_Easy;
 
 namespace DSA;
 
@@ -640,10 +640,10 @@ class Program
         // LinearSearch.Test();
 
         // using DSA._23_2_BinarySearchIterative_Easy;
-        BinarySearchIterative.Test();
+        // BinarySearchIterative.Test();
 
         // using DSA._23_3_BinarySearchRecursive_Easy;
-        // BinarySearchRecursive.Test();
+        BinarySearchRecursive.Test();
 
         // using DSA._23_4_TernarySearch_Medium;
         // TernarySearch.Test();
