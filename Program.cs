@@ -1,4 +1,4 @@
-using DSA._23_1_LinearSearch_Easy;
+using DSA._23_2_BinarySearchIterative_Easy;
 
 namespace DSA;
 
@@ -637,10 +637,10 @@ class Program
         // 23. Search (8 problems)
         // ============================================
         // using DSA._23_1_LinearSearch_Easy;
-        LinearSearch.Test();
+        // LinearSearch.Test();
 
         // using DSA._23_2_BinarySearchIterative_Easy;
-        // BinarySearchIterative.Test();
+        BinarySearchIterative.Test();
 
         // using DSA._23_3_BinarySearchRecursive_Easy;
         // BinarySearchRecursive.Test();

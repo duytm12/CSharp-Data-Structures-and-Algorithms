@@ -43,7 +43,7 @@ public class LinkedListCycle
         // If there's a cycle, fast pointer will eventually meet slow pointer
         // Time Complexity: O(n)
         // Space Complexity: O(1)
-        if (head is null && head.next is null) return false;
+        if (head is null && head!.next is null) return false;
 
         ListNode slow = head;
         ListNode fast = head;
