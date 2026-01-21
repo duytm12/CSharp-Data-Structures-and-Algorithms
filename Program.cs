@@ -1,4 +1,4 @@
-using DSA._2_7_FirstUniqueCharacter_Medium;
+using DSA._8_4_LinkedListCycle_Easy;
 
 namespace DSA;
 
@@ -76,7 +76,7 @@ class Program
         // IntersectionOfTwoArrays.Test();
         
         // using DSA._2_7_FirstUniqueCharacter_Medium;
-        FirstUniqueCharacter.Test();
+        // FirstUniqueCharacter.Test();
         
         // using DSA._2_8_FirstUniqueCharacter_Easy;
         // FirstUniqueCharacter.Test();
@@ -199,7 +199,7 @@ class Program
         // MergeKSortedLists.Test();
         
         // using DSA._8_4_LinkedListCycle_Easy;
-        // LinkedListCycle.Test();
+        LinkedListCycle.Test();
         
         // using DSA._8_5_ReorderList_Medium;
         // ReorderList.Test();

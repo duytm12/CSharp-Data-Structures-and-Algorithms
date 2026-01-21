@@ -27,7 +27,7 @@ namespace DSA._15_2_JumpGame_Medium;
 /// </summary>
 public class JumpGame
 {
-    public static bool Solution(int[] nums) // nums = [3,2,1,0,4]
+    public static bool Solution(int[] nums) // nums = [2,3,1,1,4]
     {
         // Greedy: track the farthest index we can reach so far.
         // If we ever land on an index beyond that, we're stuck.
@@ -38,7 +38,7 @@ public class JumpGame
 
         for (int i = 0; i <= farthest && i < nums.Length; i++)
         {
-            farthest = Math.Max(farthest, i + nums[i]);
+            farthest = Math.Max(farthest, i + nums[i]); // i = 1, nums[1] = 2, farthest = 3;
             if (farthest >= lastIndex) return true;
         }
 
