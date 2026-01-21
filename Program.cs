@@ -1,4 +1,4 @@
-using DSA._23_4_TernarySearch_Medium;
+using DSA._8_11_RemoveDuplicatesFromSortedList_Easy;
 
 namespace DSA;
 
@@ -187,7 +187,7 @@ class Program
         // SimplifyPath.Test();
         
         // ============================================
-        // 08. Linked List (10 problems)
+        // 08. Linked List (11 problems)
         // ============================================
         // using DSA._8_1_ReverseLinkedList_Easy;
         // ReverseLinkedList.Test();
@@ -218,6 +218,9 @@ class Program
         
         // using DSA._8_10_ReverseNodesInKGroup_Hard;
         // ReverseNodesInKGroup.Test();
+        
+        // using DSA._8_11_RemoveDuplicatesFromSortedList_Easy;
+        RemoveDuplicatesFromSortedList.Test();
         
         // ============================================
         // 09. Recursion (3 problems)
@@ -646,7 +649,7 @@ class Program
         // BinarySearchRecursive.Test();
 
         // using DSA._23_4_TernarySearch_Medium;
-        TernarySearch.Test();
+        // TernarySearch.Test();
 
         // using DSA._23_5_JumpSearch_Medium;
         // JumpSearch.Test();
