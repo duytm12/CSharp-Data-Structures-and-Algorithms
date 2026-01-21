@@ -25,7 +25,18 @@ public class FirstUniqueCharacter
         // Hint: Use Dictionary to count frequencies, then find first character with count == 1
         // Time Complexity: O(n)
         // Space Complexity: O(1) - at most 26 characters
-        
+        var dict = new Dictionary<char, int>();
+        var charArr = s.ToCharArray();
+        foreach (var c in charArr)
+        {
+            dict[c] = dict.GetValueOrDefault(c, 0) + 1;
+        }
+
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (dict[s[i]] == 1) return i;
+        }
+
         return -1;
     }
     
