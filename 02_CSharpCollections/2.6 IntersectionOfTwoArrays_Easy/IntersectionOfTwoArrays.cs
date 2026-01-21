@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using DSA._10_14_BuildTreeFromPreorderInorder_Medium;
-
 namespace DSA._2_6_IntersectionOfTwoArrays_Easy;
 
 /// <summary>
@@ -26,9 +21,14 @@ public class IntersectionOfTwoArrays
         // Hint: Use HashSet<T> to find common elements
         // Time Complexity: O(n + m)
         // Space Complexity: O(min(n, m))
+        var result = new HashSet<int>();
+        var seen = new HashSet<int>(nums1);
 
-
-        return [];
+        foreach (var n in nums2)
+        {
+            if (seen.Contains(n)) result.Add(n);
+        }
+        return [.. result];
     }
     
     public static void Test()

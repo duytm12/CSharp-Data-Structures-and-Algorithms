@@ -1,5 +1,5 @@
 using System;
-using DSA._15_2_JumpGame_Medium;
+using DSA._2_6_IntersectionOfTwoArrays_Easy;
 
 namespace DSA;
 
@@ -74,7 +74,7 @@ class Program
         // TwoSumDictionary.Test();
         
         // using DSA._2_6_IntersectionOfTwoArrays_Easy;
-        // IntersectionOfTwoArrays.Test();
+        IntersectionOfTwoArrays.Test();
         
         // using DSA._2_7_FrequencySort_Medium;
         // FrequencySort.Test();
@@ -386,7 +386,7 @@ class Program
         // BestTimeToBuySellStock.Test();
         
         // using DSA._15_2_JumpGame_Medium;
-        JumpGame.Test();
+        // JumpGame.Test();
         
         // using DSA._15_3_GasStation_Medium;
         // GasStation.Test();
