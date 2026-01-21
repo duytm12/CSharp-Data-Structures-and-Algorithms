@@ -18,6 +18,10 @@ public class LinearSearch
         // TODO: Implement Linear Search
         // Hint: Iterate through array and return index when target is found
         // Return -1 if target not found
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == target) return i;
+        }
         return -1;
     }
 

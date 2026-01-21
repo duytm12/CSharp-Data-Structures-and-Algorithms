@@ -1,4 +1,4 @@
-using DSA._8_4_LinkedListCycle_Easy;
+using DSA._23_1_LinearSearch_Easy;
 
 namespace DSA;
 
@@ -199,7 +199,7 @@ class Program
         // MergeKSortedLists.Test();
         
         // using DSA._8_4_LinkedListCycle_Easy;
-        LinkedListCycle.Test();
+        // LinkedListCycle.Test();
         
         // using DSA._8_5_ReorderList_Medium;
         // ReorderList.Test();
@@ -637,7 +637,7 @@ class Program
         // 23. Search (8 problems)
         // ============================================
         // using DSA._23_1_LinearSearch_Easy;
-        // LinearSearch.Test();
+        LinearSearch.Test();
 
         // using DSA._23_2_BinarySearchIterative_Easy;
         // BinarySearchIterative.Test();
