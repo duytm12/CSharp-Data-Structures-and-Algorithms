@@ -602,6 +602,36 @@ class Program
         
         // using DSA._21_8_DetectSquares_Medium;
         // DetectSquares.Test();
+
+        // ============================================
+        // 22. Sort (9 problems)
+        // ============================================
+        // using DSA._22_1_BubbleSort_Easy;
+        // BubbleSort.Test();
+
+        // using DSA._22_2_SelectionSort_Easy;
+        // SelectionSort.Test();
+
+        // using DSA._22_3_InsertionSort_Easy;
+        // InsertionSort.Test();
+
+        // using DSA._22_4_MergeSort_Medium;
+        // MergeSort.Test();
+
+        // using DSA._22_5_QuickSort_Medium;
+        // QuickSort.Test();
+
+        // using DSA._22_6_HeapSort_Medium;
+        // HeapSort.Test();
+
+        // using DSA._22_7_CountingSort_Hard;
+        // CountingSort.Test();
+
+        // using DSA._22_8_RadixSort_Hard;
+        // RadixSort.Test();
+
+        // using DSA._22_9_BucketSort_Hard;
+        // BucketSort.Test();
     }
 }
 
