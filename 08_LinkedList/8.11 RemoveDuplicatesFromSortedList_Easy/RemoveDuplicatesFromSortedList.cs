@@ -49,7 +49,7 @@ public class RemoveDuplicatesFromSortedList
 
         ListNode? current = head;
 
-        while (current is not null && current.next is not null)
+        while (current.next is not null)
         {
             if (current.val == current.next.val)
             {
