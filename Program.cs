@@ -1,4 +1,4 @@
-using DSA._23_7_InterpolationSearch_Hard;
+using DSA._22_1_BubbleSort_Easy;
 
 namespace DSA;
 
@@ -610,7 +610,7 @@ class Program
         // DetectSquares.Test();
 
         // ============================================
-        // 22. Sort (9 problems)
+        // 22. Sort (10 problems)
         // ============================================
         // using DSA._22_1_BubbleSort_Easy;
         // BubbleSort.Test();
@@ -639,6 +639,9 @@ class Program
         // using DSA._22_9_BucketSort_Hard;
         // BucketSort.Test();
 
+        // using DSA._22_10_ShellSort_Medium;
+        // ShellSort.Test();
+
         // ============================================
         // 23. Search (8 problems)
         // ============================================
@@ -661,7 +664,7 @@ class Program
         // ExponentialSearch.Test();
 
         // using DSA._23_7_InterpolationSearch_Hard;
-        InterpolationSearch.Test();
+        // InterpolationSearch.Test();
 
         // using DSA._23_8_FibonacciSearch_Hard;
         // FibonacciSearch.Test();
