@@ -1,4 +1,4 @@
-using DSA._8_11_RemoveDuplicatesFromSortedList_Easy;
+using DSA._15_10_LemonadeChange_Easy;
 
 namespace DSA;
 
@@ -220,7 +220,7 @@ class Program
         // ReverseNodesInKGroup.Test();
         
         // using DSA._8_11_RemoveDuplicatesFromSortedList_Easy;
-        RemoveDuplicatesFromSortedList.Test();
+        // RemoveDuplicatesFromSortedList.Test();
         
         // ============================================
         // 09. Recursion (3 problems)
@@ -382,7 +382,7 @@ class Program
         // MinimumIntervalToIncludeQuery.Test();
         
         // ============================================
-        // 15. Greedy (9 problems)
+        // 15. Greedy (10 problems)
         // ============================================
         // using DSA._15_1_BestTimeToBuySellStock_Easy;
         // BestTimeToBuySellStock.Test();
@@ -410,6 +410,9 @@ class Program
         
         // using DSA._15_9_ValidParenthesisString_Medium;
         // ValidParenthesisString.Test();
+        
+        // using DSA._15_10_LemonadeChange_Easy;
+        LemonadeChange.Test();
         
         // ============================================
         // 16. Graphs (13 problems)
