@@ -1,4 +1,4 @@
-using DSA._15_10_LemonadeChange_Easy;
+using DSA._23_7_InterpolationSearch_Hard;
 
 namespace DSA;
 
@@ -412,7 +412,7 @@ class Program
         // ValidParenthesisString.Test();
         
         // using DSA._15_10_LemonadeChange_Easy;
-        LemonadeChange.Test();
+        // LemonadeChange.Test();
         
         // ============================================
         // 16. Graphs (13 problems)
@@ -661,7 +661,7 @@ class Program
         // ExponentialSearch.Test();
 
         // using DSA._23_7_InterpolationSearch_Hard;
-        // InterpolationSearch.Test();
+        InterpolationSearch.Test();
 
         // using DSA._23_8_FibonacciSearch_Hard;
         // FibonacciSearch.Test();

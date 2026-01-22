@@ -6,7 +6,15 @@ namespace DSA._23_7_InterpolationSearch_Hard;
 /// Problem 23.7 (Hard): Interpolation Search
 /// 
 /// Interpolation Search is an improved variant of binary search for uniformly
-/// distributed sorted arrays. It uses interpolation formula to guess the position.
+/// distributed sorted arrays. It uses linear interpolation to estimate the position
+/// of the target value, rather than always checking the middle element.
+/// 
+/// Key Formula:
+/// pos = low + ((target - nums[low]) * (high - low)) / (nums[high] - nums[low])
+/// 
+/// This formula estimates where the target would be if values were uniformly
+/// distributed. For uniformly distributed data, this often finds the target
+/// in O(log log n) time instead of O(log n).
 /// 
 /// Time Complexity: O(log log n) average (uniform distribution), O(n) worst case
 /// Space Complexity: O(1)
@@ -15,11 +23,44 @@ public class InterpolationSearch
 {
     public static int Solution(int[] nums, int target)
     {
-        // TODO: Implement Interpolation Search
-        // Hint: Use interpolation formula: pos = low + ((target - nums[low]) * (high - low)) / (nums[high] - nums[low])
-        // Adjust low/high based on comparison and repeat until found or range invalid
-        // Return -1 if target not found
-        return -1;
+        if (nums == null || nums.Length == 0)
+            return -1;
+
+        int left = 0;
+        int right = nums.Length - 1;
+
+        while (left <= right && target >= nums[left] && target <= nums[right])
+        {
+            // Handle edge case: if range has only one element
+            if (left == right)
+            {
+                if (nums[left] == target)
+                    return left;
+                return -1;
+            }
+
+            int mid = left + (int)(((double)(target - nums[left]) * (right - left)) / (nums[right] - nums[left]));
+
+            // Safety check: ensure mid is within bounds
+            if (mid < left || mid > right)
+                break;
+
+            // Compare and adjust search range
+            if (nums[mid] == target)
+            {
+                return mid; // Found!
+            }
+            else if (nums[mid] < target)
+            {
+                left = mid + 1; // Target is in right half
+            }
+            else
+            {
+                right = mid - 1; // Target is in left half
+            }
+        }
+
+        return -1; // Target not found
     }
 
     public static void Test()
