@@ -16,10 +16,61 @@ public class BubbleSort
 {
     public static int[] Solution(int[] nums)
     {
-        // TODO: Implement Bubble Sort
-        // Hint: Compare adjacent elements and swap if needed
-        // Use nested loops and a swapped flag for optimization
-        return [];
+        if (nums.Length <= 1) return nums;
+
+        int n = nums.Length;
+        bool swapped;
+
+        // ============================================
+        // BUBBLE SORT EXPLAINED SIMPLY:
+        // ============================================
+        // Think of it like bubbles rising in water - the LARGEST numbers
+        // "bubble up" to the end of the array, one at a time.
+        //
+        // HOW IT WORKS:
+        // 1. Walk through the array from left to right
+        // 2. Compare each pair of neighbors: [j] and [j+1]
+        // 3. If left > right, swap them (wrong order!)
+        // 4. After one full pass, the largest number is at the end
+        // 5. Repeat until sorted
+        //
+        // ANALOGY: Like organizing books on a shelf
+        // - You walk along the shelf
+        // - If you see two books in wrong order, swap them
+        // - After one pass, the biggest book is at the end
+        // - Keep doing passes until everything is sorted
+        // ============================================
+
+        // Outer loop: How many passes we need (n-1 passes)
+        // Each pass moves the next largest number to its final position
+        for (int i = 0; i < n - 1; i++)
+        {
+            swapped = false; // Track if we made any swaps this pass
+
+            // Inner loop: Compare adjacent pairs
+            // We go from 0 to (n-i-1) because:
+            // - After pass 1: last element is sorted, so check up to n-2
+            // - After pass 2: last 2 are sorted, so check up to n-3
+            // - etc.
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                // Compare neighbors: is the left one bigger?
+                if (nums[j] > nums[j + 1])
+                {
+                    // Yes! Swap them (wrong order)
+                    int temp = nums[j];        // Save left value
+                    nums[j] = nums[j + 1];    // Put right value in left
+                    nums[j + 1] = temp;       // Put saved value in right
+                    swapped = true;            // Remember we swapped
+                }
+            }
+
+            // If we didn't swap anything, array is already sorted!
+            if (!swapped)
+                break; // Early exit - we're done!
+        }
+
+        return nums;
     }
 
     public static void Test()
