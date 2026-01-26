@@ -1,4 +1,4 @@
-using DSA._22_3_InsertionSort_Easy;
+using DSA._8_1_ReverseLinkedList_Easy;
 
 namespace DSA;
 
@@ -190,7 +190,7 @@ class Program
         // 08. Linked List (11 problems)
         // ============================================
         // using DSA._8_1_ReverseLinkedList_Easy;
-        // ReverseLinkedList.Test();
+        ReverseLinkedList.Test();
         
         // using DSA._8_2_MergeTwoSortedLists_Easy;
         // MergeTwoSortedLists.Test();
@@ -619,7 +619,7 @@ class Program
         // SelectionSort.Test();
 
         // using DSA._22_3_InsertionSort_Easy;
-        InsertionSort.Test();
+        // InsertionSort.Test();
 
         // using DSA._22_4_MergeSort_Medium;
         // MergeSort.Test();

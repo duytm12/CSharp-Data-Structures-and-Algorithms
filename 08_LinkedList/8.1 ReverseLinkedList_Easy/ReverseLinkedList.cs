@@ -31,8 +31,25 @@ public class ReverseLinkedList
         // Hint: Iterative approach with prev, curr, next pointers
         // Time Complexity: O(n)
         // Space Complexity: O(1)
+
+        if (head == null || head.next == null) return head;
+
+        ListNode? prev = null;  
+        ListNode? curr = head; 
+        ListNode? next = null;
+
+        while (curr is not null)
+        {
+            next = curr.next;
+
+            curr.next = prev;
+
+            prev = curr;
+            curr = next;
+
+        }
         
-        return null;
+        return prev;
     }
     
     public static void Test()
