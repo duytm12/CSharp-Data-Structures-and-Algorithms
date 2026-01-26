@@ -17,7 +17,20 @@ public class InsertionSort
     {
         // TODO: Implement Insertion Sort
         // Hint: For each element, shift larger elements to the right and insert current element
-        return [];
+        if (nums.Length == 1) return nums;
+
+        for (int i = 1; i < nums.Length; i++)
+        {
+            int j = i;
+
+            while (j > 0 && nums[j] < nums[j - 1])
+            {
+                (nums[j], nums[j - 1]) = (nums[j - 1], nums[j]);
+                j--;
+            }
+        }
+    
+        return nums;
     }
 
     public static void Test()

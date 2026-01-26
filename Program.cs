@@ -1,4 +1,4 @@
-using DSA._22_2_SelectionSort_Easy;
+using DSA._22_3_InsertionSort_Easy;
 
 namespace DSA;
 
@@ -616,10 +616,10 @@ class Program
         // BubbleSort.Test();
 
         // using DSA._22_2_SelectionSort_Easy;
-        SelectionSort.Test();
+        // SelectionSort.Test();
 
         // using DSA._22_3_InsertionSort_Easy;
-        // InsertionSort.Test();
+        InsertionSort.Test();
 
         // using DSA._22_4_MergeSort_Medium;
         // MergeSort.Test();
