@@ -17,7 +17,24 @@ public class SelectionSort
     {
         // TODO: Implement Selection Sort
         // Hint: Find minimum element in unsorted portion and swap with first unsorted element
-        return [];
+        if (nums.Length == 1) return nums;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int minIndex = i;
+
+            for (int j = i + 1; j < nums.Length; j++)
+            {
+                if (nums[j] < nums[minIndex]) minIndex = j;
+            }
+
+            if (minIndex != i)
+            {
+                (nums[i], nums[minIndex]) = (nums[minIndex], nums[i]);
+            }
+        }
+
+        return nums;
     }
 
     public static void Test()

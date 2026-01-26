@@ -1,4 +1,4 @@
-using DSA._18_1_ClimbingStairs_Easy;
+using DSA._22_2_SelectionSort_Easy;
 
 namespace DSA;
 
@@ -487,7 +487,7 @@ class Program
         // 18. 1-D Dynamic Programming (12 problems)
         // ============================================
         // using DSA._18_1_ClimbingStairs_Easy;
-        ClimbingStairs.Test();
+        // ClimbingStairs.Test();
         
         // using DSA._18_2_HouseRobber_Medium;
         // HouseRobber.Test();
@@ -616,7 +616,7 @@ class Program
         // BubbleSort.Test();
 
         // using DSA._22_2_SelectionSort_Easy;
-        // SelectionSort.Test();
+        SelectionSort.Test();
 
         // using DSA._22_3_InsertionSort_Easy;
         // InsertionSort.Test();
