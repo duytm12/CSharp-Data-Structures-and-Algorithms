@@ -38,15 +38,13 @@ public class ReverseLinkedList
         ListNode? curr = head; 
         ListNode? next = null;
 
+
         while (curr is not null)
         {
             next = curr.next;
-
             curr.next = prev;
-
             prev = curr;
             curr = next;
-
         }
         
         return prev;

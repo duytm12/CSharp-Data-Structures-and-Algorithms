@@ -1,4 +1,4 @@
-using DSA._8_1_ReverseLinkedList_Easy;
+using DSA._4_7_AddBinary_Easy;
 
 namespace DSA;
 
@@ -103,7 +103,7 @@ class Program
         // ValidPalindromeII.Test();
         
         // ============================================
-        // 04. String Manipulation (6 problems)
+        // 04. String Manipulation (7 problems)
         // ============================================
         // using DSA._4_1_ReverseString_Easy;
         // ReverseString.Test();
@@ -119,9 +119,12 @@ class Program
         
         // using DSA._4_5_ReverseWordsInString_Medium;
         // ReverseWordsInString.Test();
-
+        
         // using DSA._4_6_LongestCommonPrefix_Easy;
         // LongestCommonPrefix.Test();
+        
+        // using DSA._4_7_AddBinary_Easy;
+        AddBinary.Test();
         
         // ============================================
         // 05. Binary Search (7 problems)
@@ -190,7 +193,7 @@ class Program
         // 08. Linked List (11 problems)
         // ============================================
         // using DSA._8_1_ReverseLinkedList_Easy;
-        ReverseLinkedList.Test();
+        // ReverseLinkedList.Test();
         
         // using DSA._8_2_MergeTwoSortedLists_Easy;
         // MergeTwoSortedLists.Test();
