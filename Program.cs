@@ -1,4 +1,4 @@
-using DSA._4_7_AddBinary_Easy;
+using DSA._15_1_BestTimeToBuySellStock_Easy;
 
 namespace DSA;
 
@@ -124,7 +124,7 @@ class Program
         // LongestCommonPrefix.Test();
         
         // using DSA._4_7_AddBinary_Easy;
-        AddBinary.Test();
+        // AddBinary.Test();
         
         // ============================================
         // 05. Binary Search (7 problems)
@@ -388,7 +388,7 @@ class Program
         // 15. Greedy (10 problems)
         // ============================================
         // using DSA._15_1_BestTimeToBuySellStock_Easy;
-        // BestTimeToBuySellStock.Test();
+        BestTimeToBuySellStock.Test();
         
         // using DSA._15_2_JumpGame_Medium;
         // JumpGame.Test();
