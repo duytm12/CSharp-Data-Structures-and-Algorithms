@@ -1,4 +1,4 @@
-using DSA._15_1_BestTimeToBuySellStock_Easy;
+using DSA._7_1_ValidParentheses_Easy;
 
 namespace DSA;
 
@@ -172,7 +172,7 @@ class Program
         // 07. Stack (6 problems)
         // ============================================
         // using DSA._7_1_ValidParentheses_Easy;
-        // ValidParentheses.Test();
+        ValidParentheses.Test();
         
         // using DSA._7_2_DailyTemperatures_Medium;
         // DailyTemperatures.Test();
@@ -190,7 +190,7 @@ class Program
         // SimplifyPath.Test();
         
         // ============================================
-        // 08. Linked List (11 problems)
+        // 08. Linked List (12 problems)
         // ============================================
         // using DSA._8_1_ReverseLinkedList_Easy;
         // ReverseLinkedList.Test();
@@ -224,6 +224,9 @@ class Program
         
         // using DSA._8_11_RemoveDuplicatesFromSortedList_Easy;
         // RemoveDuplicatesFromSortedList.Test();
+        
+        // using DSA._8_12_PalindromeLinkedList_Easy;
+        // PalindromeLinkedList.Test();
         
         // ============================================
         // 09. Recursion (3 problems)
@@ -388,7 +391,7 @@ class Program
         // 15. Greedy (10 problems)
         // ============================================
         // using DSA._15_1_BestTimeToBuySellStock_Easy;
-        BestTimeToBuySellStock.Test();
+        // BestTimeToBuySellStock.Test();
         
         // using DSA._15_2_JumpGame_Medium;
         // JumpGame.Test();
