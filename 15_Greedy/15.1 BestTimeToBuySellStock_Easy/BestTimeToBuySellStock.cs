@@ -18,25 +18,24 @@ public class BestTimeToBuySellStock
         if (prices.Length == 1) return 0;
         int maxProfit = 0;
 
-        // Solution 1: Calculate maxProfit based on minBuy
-        // int minBuyPrice = 10000;
+        //Solution 1: Calculate maxProfit based on minBuy
+        int minBuyPrice = 10000;
 
-
-        // for (int i = 0; i < prices.Length; i++)
-        // {
-        //     if (prices[i] < minBuyPrice)
-        //     {
-        //         minBuyPrice = prices[i];
-        //     }
-        //     else
-        //     {
-        //         int profit = prices[i] - minBuyPrice;
-        //         if (profit > maxProfit)
-        //         {
-        //             maxProfit = profit;
-        //         }
-        //     }
-        // }
+        for (int i = 0; i < prices.Length; i++)
+        {
+            if (prices[i] < minBuyPrice)
+            {
+                minBuyPrice = prices[i];
+            }
+            else
+            {
+                int profit = prices[i] - minBuyPrice;
+                if (profit > maxProfit)
+                {
+                    maxProfit = profit;
+                }
+            }
+        }
 
         // Solution 2: Calculate maxProfit based on maxSell
         int maxSellPrice = 0;
@@ -49,7 +48,7 @@ public class BestTimeToBuySellStock
             }
             else
             {
-                int profit = maxSellPrice - prices[i];
+                int profit = maxSellPrice - prices[i]; // 4,5,1,2,3,4
                 if (profit > maxProfit)
                 {
                     maxProfit = profit;
