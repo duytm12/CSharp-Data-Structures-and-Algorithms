@@ -1,4 +1,4 @@
-using DSA._7_1_ValidParentheses_Easy;
+using DSA._10_1_MaxDepth_Easy;
 
 namespace DSA;
 
@@ -172,7 +172,7 @@ class Program
         // 07. Stack (6 problems)
         // ============================================
         // using DSA._7_1_ValidParentheses_Easy;
-        ValidParentheses.Test();
+        // ValidParentheses.Test();
         
         // using DSA._7_2_DailyTemperatures_Medium;
         // DailyTemperatures.Test();
@@ -244,7 +244,7 @@ class Program
         // 10. Trees (15 problems)
         // ============================================
         // using DSA._10_1_MaxDepth_Easy;
-        // MaxDepth.Test();
+        MaxDepth.Test();
         
         // using DSA._10_2_LevelOrderTraversal_Medium;
         // LevelOrderTraversal.Test();

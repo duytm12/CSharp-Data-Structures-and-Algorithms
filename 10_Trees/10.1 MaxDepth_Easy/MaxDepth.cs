@@ -26,14 +26,16 @@ public class TreeNode
 
 public class MaxDepth
 {
+    /// <summary>
+    /// Max depth = 1 + max(left subtree depth, right subtree depth).
+    /// Base case: null node has depth 0.
+    /// </summary>
     public static int Solution(TreeNode? root)
     {
-        // TODO: Implement solution
-        // Hint: Recursive: max depth = 1 + max(left depth, right depth)
-        // Time Complexity: O(n)
-        // Space Complexity: O(h) where h is height
-        
-        return 0;
+        if (root == null) return 0;
+        int leftDepth = Solution(root.left);
+        int rightDepth = Solution(root.right);
+        return 1 + Math.Max(leftDepth, rightDepth);
     }
     
     public static void Test()
