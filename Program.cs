@@ -103,7 +103,7 @@ class Program
         // ValidPalindromeII.Test();
         
         // ============================================
-        // 04. String Manipulation (7 problems)
+        // 04. String Manipulation (9 problems)
         // ============================================
         // using DSA._4_1_ReverseString_Easy;
         // ReverseString.Test();
@@ -125,6 +125,12 @@ class Program
         
         // using DSA._4_7_AddBinary_Easy;
         // AddBinary.Test();
+
+        // using DSA._4_8_VanityNumberToDigits_Easy;
+        // VanityNumberToDigits.Test();
+
+        // using DSA._4_9_LetterCombinationsOfPhoneNumber_Medium;
+        // LetterCombinationsOfPhoneNumber.Test();
         
         // ============================================
         // 05. Binary Search (7 problems)
