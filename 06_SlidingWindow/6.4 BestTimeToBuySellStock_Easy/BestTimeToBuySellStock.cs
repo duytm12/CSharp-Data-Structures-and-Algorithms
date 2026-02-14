@@ -28,8 +28,25 @@ public class BestTimeToBuySellStock
         // Hint: Sliding window - track minimum price seen so far, calculate max profit
         // Time Complexity: O(n)
         // Space Complexity: O(1)
+
+        // Buy min, sell max
+        if (prices.Length < 2) return 0;
+
+        int maxProfit = 0;
         
-        return 0;
+        int minBuy = int.MaxValue;
+
+        for (int i = 0; i < prices.Length; i++)
+        {
+
+            if (prices[i] < minBuy) minBuy = prices[i];
+
+            int profit = prices[i] - minBuy;
+
+            if (profit > maxProfit) maxProfit = profit;
+        }
+        
+        return maxProfit;
     }
     
     public static void Test()

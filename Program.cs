@@ -1,4 +1,4 @@
-using DSA._4_8_VanityNumberToDigits_Easy;
+using DSA._6_4_BestTimeToBuySellStock_Easy;
 
 namespace DSA;
 
@@ -127,7 +127,7 @@ class Program
         // AddBinary.Test();
 
         // using DSA._4_8_VanityNumberToDigits_Easy;
-        VanityNumberToDigits.Test();
+        // VanityNumberToDigits.Test();
 
         // using DSA._4_9_LetterCombinationsOfPhoneNumber_Medium;
         // LetterCombinationsOfPhoneNumber.Test();
@@ -159,8 +159,8 @@ class Program
         // ============================================
         // 06. Sliding Window (5 problems)
         // ============================================
-        // using DSA._6_1_BestTimeToBuySellStock_Easy;
-        // BestTimeToBuySellStock.Test();
+        // using DSA._6_1_MaxAverageSubarray_Easy;
+        // MaxAverageSubarray.Test();
         
         // using DSA._6_2_LongestSubstringWithoutRepeating_Medium;
         // LongestSubstringWithoutRepeating.Test();
@@ -168,8 +168,8 @@ class Program
         // using DSA._6_3_LongestRepeatingCharacterReplacement_Medium;
         // LongestRepeatingCharacterReplacement.Test();
         
-        // using DSA._6_4_MinimumWindowSubstring_Hard;
-        // MinimumWindowSubstring.Test();
+        // using DSA._6_4_BestTimeToBuySellStock_Easy;
+        BestTimeToBuySellStock.Test();
         
         // using DSA._6_5_SlidingWindowMaximum_Hard;
         // SlidingWindowMaximum.Test();

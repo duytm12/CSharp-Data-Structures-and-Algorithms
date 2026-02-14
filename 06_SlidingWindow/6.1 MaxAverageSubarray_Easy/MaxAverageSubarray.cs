@@ -19,28 +19,44 @@ namespace DSA._6_1_MaxAverageSubarray_Easy;
 /// </summary>
 public class MaxAverageSubarray
 {
-    public static double Solution(int[] nums, int k)
+    public static double Solution(int[] nums, int k) 
     {
         // TODO: Implement solution
         // Hint: Fixed-size sliding window, maintain window sum
         // Time Complexity: O(n)
         // Space Complexity: O(1)
+
+        if (k == nums.Length && k== 1) return nums[0]; //nums = [1,12,-5,-6,50,3], k = 4
+
+        long windowSum = 0;
+        for (int i = 0; i < k; i++)
+        {
+            windowSum += nums[i];
+        }
+
+        double maxSum = windowSum;
+
+        for (int i = k; i < nums.Length; i++)
+        {
+            windowSum += nums[i] - nums[i - k];
+            if (windowSum > maxSum) maxSum = windowSum;
+        }
         
-        return 0.0;
+        return maxSum / k;
     }
     
     public static void Test()
     {
         Console.WriteLine("\n=== Testing Problem 6.1: Maximum Average Subarray ===");
         
-        int[] test1 = { 1, 12, -5, -6, 50, 3 };
+        int[] test1 = [1, 12, -5, -6, 50, 3];
         int k1 = 4;
         double result1 = Solution(test1, k1);
         Console.WriteLine($"Test 1 - Input: nums = [1,12,-5,-6,50,3], k = {k1}");
         Console.WriteLine($"         Output: {result1:F2}, Expected: 12.75");
         Console.WriteLine($"         {(Math.Abs(result1 - 12.75) < 0.01 ? "✓ PASSED" : "✗ FAILED")}\n");
         
-        int[] test2 = { 5 };
+        int[] test2 = [5];
         int k2 = 1;
         double result2 = Solution(test2, k2);
         Console.WriteLine($"Test 2 - Input: nums = [5], k = {k2}");
