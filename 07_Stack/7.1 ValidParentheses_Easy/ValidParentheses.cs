@@ -24,10 +24,27 @@ public class ValidParentheses
         // Hint: Use Stack to match opening and closing brackets
         // Time Complexity: O(n)
         // Space Complexity: O(n)
+        if (s.Length % 2 == 1) return false;
+
+        var stack = new Stack<char>();
+        foreach (char c in s)
+        {
+            if (c == '(' || c == '[' || c == '{')
+            {
+                stack.Push(c);
+            }
+            else
+            {
+                if (stack.Count == 0) return false;
+                char o = stack.Pop();
+                if ((c == ')' && o != '(') || (c == '}' && o != '{') || (c == ']' && o != '['))
+                    return false;
+            }
+        }
 
         
         
-        return false;
+        return stack.Count==0;
     }
     
     public static void Test()

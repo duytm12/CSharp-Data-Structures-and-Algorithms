@@ -1,4 +1,4 @@
-using DSA._6_4_BestTimeToBuySellStock_Easy;
+using DSA._7_1_ValidParentheses_Easy;
 
 namespace DSA;
 
@@ -169,7 +169,7 @@ class Program
         // LongestRepeatingCharacterReplacement.Test();
         
         // using DSA._6_4_BestTimeToBuySellStock_Easy;
-        BestTimeToBuySellStock.Test();
+        // BestTimeToBuySellStock.Test();
         
         // using DSA._6_5_SlidingWindowMaximum_Hard;
         // SlidingWindowMaximum.Test();
@@ -178,7 +178,7 @@ class Program
         // 07. Stack (6 problems)
         // ============================================
         // using DSA._7_1_ValidParentheses_Easy;
-        // ValidParentheses.Test();
+        ValidParentheses.Test();
         
         // using DSA._7_2_DailyTemperatures_Medium;
         // DailyTemperatures.Test();
