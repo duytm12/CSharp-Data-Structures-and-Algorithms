@@ -32,20 +32,41 @@ public class BestTimeToBuySellStock
         // Buy min, sell max
         if (prices.Length < 2) return 0;
 
+        // int maxProfit = 0;
+
+        // int minBuy = int.MaxValue;
+
+        // for (int i = 0; i < prices.Length; i++)
+        // {
+
+        //     if (prices[i] < minBuy) minBuy = prices[i];
+
+        //     int profit = prices[i] - minBuy;
+
+        //     if (profit > maxProfit) maxProfit = profit;
+        // }
+
+        // return maxProfit;
+
         int maxProfit = 0;
-        
-        int minBuy = int.MaxValue;
+        int left = 0;
+        int right = 1;
 
-        for (int i = 0; i < prices.Length; i++)
+        while (right < prices.Length)
         {
+            if (prices[right] > prices[left])
+            {
+                int profit = prices[right] - prices[left];
+                if (profit > maxProfit) maxProfit = profit;
+            }
 
-            if (prices[i] < minBuy) minBuy = prices[i];
-
-            int profit = prices[i] - minBuy;
-
-            if (profit > maxProfit) maxProfit = profit;
+            else
+            {
+                left = right;
+            }
+            right++;
         }
-        
+
         return maxProfit;
     }
     
