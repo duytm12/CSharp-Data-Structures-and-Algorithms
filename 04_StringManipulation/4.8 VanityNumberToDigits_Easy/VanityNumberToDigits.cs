@@ -20,7 +20,32 @@ public class VanityNumberToDigits
 {
     public static string Solution(string s)
     {
-        return "";
+        // Dictionary { charArray, int}
+        // Split Input (-)
+        // Check each part
+        // Use String builder to Append
+
+        var dict = new Dictionary<char, int>();
+        string[] groups = { "", "", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ" };
+
+        for (int i = 2; i <= 9; i++)
+        {
+            foreach (char d in groups[i])
+            {
+                dict[d] = i;
+                dict[char.ToLower(d)] = i;
+            }
+        }
+
+        var result = new StringBuilder();
+        foreach (char c in s)
+        {
+            if (char.IsLetter(c)) result.Append(dict.GetValueOrDefault(c));
+            else result.Append(c);
+        }
+
+        return result.ToString();
+
     }
 
     public static void Test()

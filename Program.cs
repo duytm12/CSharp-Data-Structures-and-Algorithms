@@ -1,4 +1,4 @@
-using DSA._10_1_MaxDepth_Easy;
+using DSA._4_8_VanityNumberToDigits_Easy;
 
 namespace DSA;
 
@@ -127,7 +127,7 @@ class Program
         // AddBinary.Test();
 
         // using DSA._4_8_VanityNumberToDigits_Easy;
-        // VanityNumberToDigits.Test();
+        VanityNumberToDigits.Test();
 
         // using DSA._4_9_LetterCombinationsOfPhoneNumber_Medium;
         // LetterCombinationsOfPhoneNumber.Test();
@@ -250,7 +250,7 @@ class Program
         // 10. Trees (15 problems)
         // ============================================
         // using DSA._10_1_MaxDepth_Easy;
-        MaxDepth.Test();
+        // MaxDepth.Test();
         
         // using DSA._10_2_LevelOrderTraversal_Medium;
         // LevelOrderTraversal.Test();
