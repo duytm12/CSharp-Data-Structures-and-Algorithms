@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO.Pipelines;
 
 namespace DSA._7_2_DailyTemperatures_Medium;
 
@@ -25,8 +26,23 @@ public class DailyTemperatures
         // Hint: Monotonic stack - keep decreasing temperatures
         // Time Complexity: O(n)
         // Space Complexity: O(n)
-        
-        return Array.Empty<int>();
+
+        if (temperatures.Length == 1) return [0];
+
+        var result = new int[temperatures.Length];
+        var stack = new Stack<int>();
+
+        for (int i = 0; i < temperatures.Length; i++)
+        {
+            while (stack.Count > 0 && temperatures[i] > temperatures[stack.Peek()])
+            {
+                int j = stack.Pop();
+                result[j] = i - j;
+            }
+            stack.Push(i);
+        }
+       
+        return result;
     }
     
     public static void Test()

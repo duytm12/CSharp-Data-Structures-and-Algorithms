@@ -35,10 +35,11 @@ public class MinStack
     // Hint: Use two stacks - one for values, one for minimums, OR use a single stack with pairs
     // Time Complexity: O(1) for all operations
     // Space Complexity: O(n)
-    
+
     public MinStack()
     {
         // Initialize your data structure here
+    
     }
     
     public void Push(int val)

@@ -1,4 +1,4 @@
-using DSA._7_1_ValidParentheses_Easy;
+using DSA._7_2_DailyTemperatures_Medium;
 
 namespace DSA;
 
@@ -178,10 +178,10 @@ class Program
         // 07. Stack (6 problems)
         // ============================================
         // using DSA._7_1_ValidParentheses_Easy;
-        ValidParentheses.Test();
+        // ValidParentheses.Test();
         
         // using DSA._7_2_DailyTemperatures_Medium;
-        // DailyTemperatures.Test();
+        DailyTemperatures.Test();
         
         // using DSA._7_3_NextGreaterElementI_Easy;
         // NextGreaterElementI.Test();
