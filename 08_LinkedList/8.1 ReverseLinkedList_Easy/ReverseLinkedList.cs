@@ -32,12 +32,11 @@ public class ReverseLinkedList
         // Time Complexity: O(n)
         // Space Complexity: O(1)
 
-        if (head == null || head.next == null) return head;
+        if (head is null || head.next is null) return head;
 
-        ListNode? prev = null;  
-        ListNode? curr = head; 
-        ListNode? next = null;
-
+        ListNode prev = null;
+        ListNode curr = head;
+        ListNode next = null;
 
         while (curr is not null)
         {
@@ -46,8 +45,10 @@ public class ReverseLinkedList
             prev = curr;
             curr = next;
         }
-        
+
         return prev;
+
+        
     }
     
     public static void Test()

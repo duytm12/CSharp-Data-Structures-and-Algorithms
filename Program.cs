@@ -1,4 +1,4 @@
-using DSA._7_2_DailyTemperatures_Medium;
+using DSA._8_2_MergeTwoSortedLists_Easy;
 
 namespace DSA;
 
@@ -181,7 +181,7 @@ class Program
         // ValidParentheses.Test();
         
         // using DSA._7_2_DailyTemperatures_Medium;
-        DailyTemperatures.Test();
+        // DailyTemperatures.Test();
         
         // using DSA._7_3_NextGreaterElementI_Easy;
         // NextGreaterElementI.Test();
@@ -202,7 +202,7 @@ class Program
         // ReverseLinkedList.Test();
         
         // using DSA._8_2_MergeTwoSortedLists_Easy;
-        // MergeTwoSortedLists.Test();
+        MergeTwoSortedLists.Test();
         
         // using DSA._8_3_MergeKSortedLists_Hard;
         // MergeKSortedLists.Test();

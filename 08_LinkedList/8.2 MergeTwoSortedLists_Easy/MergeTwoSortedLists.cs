@@ -4,13 +4,28 @@ using System.Collections.Generic;
 namespace DSA._8_2_MergeTwoSortedLists_Easy;
 
 /// <summary>
-/// Problem 8.2 (Easy): Merge Two Sorted Lists
+/// Problem 8.2 (Easy): Merge Two Sorted Lists - LeetCode 21
 /// You are given the heads of two sorted linked lists list1 and list2.
-/// Merge the two lists in a one sorted list.
-/// 
-/// Example:
+/// Merge the two lists into one sorted list. The list should be made by splicing
+/// together the nodes of the first two lists.
+/// Return the head of the merged linked list.
+///
+/// Example 1:
 /// Input: list1 = [1,2,4], list2 = [1,3,4]
 /// Output: [1,1,2,3,4,4]
+///
+/// Example 2:
+/// Input: list1 = [], list2 = []
+/// Output: []
+///
+/// Example 3:
+/// Input: list1 = [], list2 = [0]
+/// Output: [0]
+///
+/// Constraints:
+/// - The number of nodes in both lists is in the range [0, 50].
+/// - -100 <= Node.val <= 100
+/// - Both list1 and list2 are sorted in non-decreasing order.
 /// </summary>
 public class ListNode
 {
@@ -29,11 +44,33 @@ public class MergeTwoSortedLists
     public static ListNode? Solution(ListNode? list1, ListNode? list2)
     {
         // TODO: Implement solution
-        // Hint: Use dummy node, compare and merge
-        // Time Complexity: O(n + m)
-        // Space Complexity: O(1)
-        
-        return null;
+        if (list1 is null && list2 is null) return null;
+        if (list1 is null) return list2;
+        if (list2 is null) return list1;
+
+        var t1 = list1;
+        var t2 = list2;
+        var dummy = new ListNode();
+        var tail = dummy;
+
+        while (t1 is not null && t2 is not null)
+        {
+            if (t1.val <= t2.val)
+            {
+                tail.next = t1;
+                tail = t1;
+                t1 = t1.next;
+            }
+            else
+            {
+                tail.next = t2;
+                tail = t2;
+                t2 = t2.next;
+            }
+        }
+
+        tail.next = t1 ?? t2;   // append remainder
+        return dummy.next;
     }
     
     public static void Test()
@@ -57,6 +94,21 @@ public class MergeTwoSortedLists
         Console.WriteLine($"         Output: [{string.Join(",", values2)}], Expected: [1,2]");
         bool passed2 = values2.Count == 2 && values2[0] == 1 && values2[1] == 2;
         Console.WriteLine($"         {(passed2 ? "✓ PASSED" : "✗ FAILED")}\n");
+
+        var result3 = Solution(null, null);
+        var values3 = GetValues(result3);
+        Console.WriteLine($"Test 3 - Input: list1 = [], list2 = []");
+        Console.WriteLine($"         Output: [{string.Join(",", values3)}], Expected: []");
+        bool passed3 = values3.Count == 0;
+        Console.WriteLine($"         {(passed3 ? "✓ PASSED" : "✗ FAILED")}\n");
+
+        var list5 = new ListNode(0);
+        var result4 = Solution(null, list5);
+        var values4 = GetValues(result4);
+        Console.WriteLine($"Test 4 - Input: list1 = [], list2 = [0]");
+        Console.WriteLine($"         Output: [{string.Join(",", values4)}], Expected: [0]");
+        bool passed4 = values4.Count == 1 && values4[0] == 0;
+        Console.WriteLine($"         {(passed4 ? "✓ PASSED" : "✗ FAILED")}\n");
     }
     
     private static List<int> GetValues(ListNode? head)
