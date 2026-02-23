@@ -18,8 +18,18 @@ public class KthLargest
         // Hint: Use PriorityQueue or QuickSelect algorithm
         // Time Complexity: O(n) average with QuickSelect, O(n log k) with heap
         // Space Complexity: O(1) QuickSelect, O(k) heap
+        var minHeap = new PriorityQueue<int, int>();
+
+        foreach (var num in nums)
+        {
+            minHeap.Enqueue(num);
+            if (minHeap.Count > k)
+            {
+                minHeap.Dequeue();
+            }
+        }
         
-        return 0;
+        return minHeap.Peek();
     }
     
     public static void Test()

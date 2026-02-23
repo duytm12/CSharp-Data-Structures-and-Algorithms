@@ -1,4 +1,4 @@
-using DSA._8_2_MergeTwoSortedLists_Easy;
+using DSA._10_12_ValidateBST_Medium;
 
 namespace DSA;
 
@@ -202,7 +202,7 @@ class Program
         // ReverseLinkedList.Test();
         
         // using DSA._8_2_MergeTwoSortedLists_Easy;
-        MergeTwoSortedLists.Test();
+        // MergeTwoSortedLists.Test();
         
         // using DSA._8_3_MergeKSortedLists_Hard;
         // MergeKSortedLists.Test();
@@ -283,7 +283,7 @@ class Program
         // CountGoodNodes.Test();
         
         // using DSA._10_12_ValidateBST_Medium;
-        // ValidateBST.Test();
+        ValidateBST.Test();
         
         // using DSA._10_13_KthSmallestInBST_Medium;
         // KthSmallestInBST.Test();

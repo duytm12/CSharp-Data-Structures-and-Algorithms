@@ -3,12 +3,12 @@ using System;
 namespace DSA._10_12_ValidateBST_Medium;
 
 /// <summary>
-/// Problem 10.12 (Medium): Validate Binary Search Tree
+/// Problem 10.12 (Medium): Validate Binary Search Tree — LeetCode 98
 /// Given the root of a binary tree, determine if it is a valid binary search tree (BST).
 /// 
 /// A valid BST is defined as follows:
-/// - The left subtree of a node contains only nodes with keys less than the node's key.
-/// - The right subtree of a node contains only nodes with keys greater than the node's key.
+/// - The left subtree of a node contains only nodes with keys strictly less than the node's key.
+/// - The right subtree of a node contains only nodes with keys strictly greater than the node's key.
 /// - Both the left and right subtrees must also be binary search trees.
 /// 
 /// Example:
@@ -37,13 +37,20 @@ public class ValidateBST
 {
     public static bool IsValidBST(TreeNode? root)
     {
-        // TODO: Implement solution
-        // Hint: Use bounds (min, max) for each node, check if node value is within bounds
-        // Time Complexity: O(n)
-        // Space Complexity: O(h)
-        
-        return false;
+        // Use long to handle int boundaries (-2^31, 2^31-1) without overflow
+        return IsValid(root, long.MinValue, long.MaxValue);
     }
+
+    private static bool IsValid(TreeNode? node, long min, long max)
+    {
+        if (node == null) return true;
+
+        if (node.val <= min || node.val >= max) return false;
+
+        return IsValid(node.left, min, node.val) && IsValid(node.right, node.val, max);
+    }
+
+    
     
     public static void Test()
     {
