@@ -22,7 +22,7 @@ public class KthLargest
 
         foreach (var num in nums)
         {
-            minHeap.Enqueue(num);
+            minHeap.Enqueue(num, num);
             if (minHeap.Count > k)
             {
                 minHeap.Dequeue();

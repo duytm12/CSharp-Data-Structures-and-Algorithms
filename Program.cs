@@ -1,5 +1,4 @@
-using DSA._10_12_ValidateBST_Medium;
-
+using DSA._14_1_MergeIntervals_Medium;
 namespace DSA;
 
 /// <summary>
@@ -283,7 +282,7 @@ class Program
         // CountGoodNodes.Test();
         
         // using DSA._10_12_ValidateBST_Medium;
-        ValidateBST.Test();
+        // ValidateBST.Test();
         
         // using DSA._10_13_KthSmallestInBST_Medium;
         // KthSmallestInBST.Test();
@@ -376,7 +375,7 @@ class Program
         // 14. Intervals (6 problems)
         // ============================================
         // using DSA._14_1_MergeIntervals_Medium;
-        // MergeIntervals.Test();
+        MergeIntervals.Test();
         
         // using DSA._14_2_InsertInterval_Medium;
         // InsertInterval.Test();
