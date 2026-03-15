@@ -65,12 +65,9 @@ public class TwoSum
             }
             
             dict[nums[i]] = i;
-            
         }
 
-
         return [];
-
     }
 
 
