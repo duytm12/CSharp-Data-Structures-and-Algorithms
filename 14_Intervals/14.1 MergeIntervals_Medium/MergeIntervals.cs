@@ -27,7 +27,7 @@ public class MergeIntervals
 
         var merged = new List<List<int>>
         {
-            new List<int> { sorted[0][0], sorted[0][1] }
+            sorted[0]
         };
 
         for (int i = 1; i < sorted.Count; i++)
@@ -38,7 +38,7 @@ public class MergeIntervals
             if (curr[0] <= lastMerge[1])
                 lastMerge[1] = Math.Max(curr[1], lastMerge[1]);
             else
-                merged.Add(new List<int> { curr[0], curr[1] });
+                merged.Add(curr);
         }
 
         return merged;

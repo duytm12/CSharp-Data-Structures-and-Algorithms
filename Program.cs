@@ -17,7 +17,7 @@ class Program
         // Uncomment the using statement and Test() call for the problem you want to test
 
         // ============================================
-        // 01. Arrays & Hashing (10 problems)
+        // 01. Arrays & Hashing (12 problems)
         // ============================================
         // using DSA._1_1_ContainsDuplicate_Easy;
         // ContainsDuplicate.Test();
@@ -51,7 +51,9 @@ class Program
 
         // using DSA._1_11_MergeSortedArray_Easy;
         // MergeSortedArray.Test();
-        
+
+        // using DSA._1_12_ThirdMaximumNumber_Easy;
+        // ThirdMaximumNumber.Test();
 
         // ============================================
         // 02. C# Collections (9 problems)
